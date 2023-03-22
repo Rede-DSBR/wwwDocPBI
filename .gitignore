@@ -4,5 +4,9 @@
 # Local onde as páginas são copiadas antes de adicionadas
 # ao container
 
-www
-www/*
+# temporariamente removido para adiconar manualmente
+# www
+# www/*
+
+static
+static/*
