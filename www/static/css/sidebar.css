@@ -1,0 +1,459 @@
+/*
+Estilos para a página base de documentação do powerbi
+Utiliza bootstrap 5 a customizações apenas para utilizar 
+a navbar na lateral (sidebar) que não é nativa do bootstrap,
+evitando carregar mais bibliotecas externas.
+
+Variáveis para cores de fundo definidas no início do arquivo 
+com escopo global
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+:root {
+    --fundo: #fafafa;
+    --linha-separadora: #ddd;
+    --texto: #171717;
+    --sidebar-background: #7386D5;
+    --sidebar-selected: #6d7fcc;
+    --sidebar-color: #fff;
+}
+
+hr.solid {
+    border-top: 4px solid #999;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+body {
+    font-family: Roboto Slab,ff-tisa-web-pro,Georgia,Arial,sans-serif;
+}
+
+p {
+    font-family: Roboto Slab,ff-tisa-web-pro,Georgia,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: var(--texto);
+}
+
+h2 {
+    font-size: 24px;
+}
+
+a,
+a:hover,
+a:focus {
+    color: #000000;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.navbar {
+    padding: 15px 10px;
+    background: var(--sidebar-color);
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed var(--linha-separadora);
+    margin: 40px 0;
+}
+
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+.wrapper {
+    display: flex;
+
+    
+
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+#sidebar {
+    flex: none;
+    width: 25%;  
+    padding: 1.5rem;
+    height: 100%;
+    position: relative;
+    position: sticky;
+    top: 0px;
+    display: none;
+}
+
+#sidebar-content {
+    height: 100%;
+    overflow: auto;
+}
+
+.li_button {
+    display: flex;
+}
+
+.button_sidebar {
+    height: 30px;
+    width: 100%;
+    padding-bottom: 2px;
+    padding-left: 1rem;
+    padding-top: 2px;
+    outline-offset: -0.125rem!important;
+    color: #171717;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.button_sidebar:hover {
+    text-decoration: underline;
+}
+
+#sidebar.active {
+    margin-left: -25%;
+}
+
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    background-color: #f2f2f2;
+    font-weight: 600;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.lacuna {
+    height: 30px;
+}
+
+ul ul a {
+    height: 30px;
+    width: 100%;
+    padding-bottom: 2px;
+    padding-left: 1rem;
+    padding-top: 2px;
+    outline-offset: -0.125rem!important;
+    color: #171717;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+ul ul a:hover {
+    text-decoration: underline;
+}
+
+ul.CTAs {
+    padding: 20px;
+}
+
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+a.download {
+    background: var(--sidebar-color);
+    color: #7386D5;
+}
+
+a.article,
+a.article:hover {
+    background: var(--sidebar-selected) !important;
+    color: var(--sidebar-color) !important;
+}
+
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+#content {
+    flex: none;
+    width: auto;
+    max-width: 100%;
+    padding: 1.5rem;
+    padding-bottom: 50px;
+}
+
+#content.active {
+    width: 100%;
+}
+
+#sidebarCollapse {
+    width: 29.5px;
+    height: 29.5px;
+    background: #f5f5f5;
+    cursor: pointer;
+    margin-left: 21px;
+}
+
+#sidebarCollapse span {
+    width: 80%;
+    height: 2px;
+    margin: 0 auto;
+    display: block;
+    background: #555;
+    transition: all 0.8s cubic-bezier(0.810, -0.330, 0.345, 1.375);
+    transition-delay: 0.2s;
+}
+
+#sidebarCollapse span:first-of-type {
+    transform: rotate(45deg) translate(2px, 2px);
+}
+
+#sidebarCollapse span:nth-of-type(2) {
+    opacity: 0;
+}
+
+#sidebarCollapse span:last-of-type {
+    transform: rotate(-45deg) translate(1px, -1px);
+}
+
+#sidebarCollapse.active span {
+    transform: none;
+    opacity: 1;
+    margin: 5px auto;
+}
+
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+/* Header */
+
+#header {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    height: 33px;
+    justify-content: space-between;
+    min-height: 33px;
+    padding-left: 0;
+    padding-right: 0;
+    position: fixed;
+    width: 100%;
+    border-top: 1px solid #e6e6e6;
+    background-color: #fff;
+    z-index: 999;
+    left: 0;
+    bottom: 0;
+}
+
+#content_logomarca {
+    height: 80%;
+    display: flex;
+    align-items: center;
+}
+
+#logomarca {
+    height: 20px;
+    width: auto;
+}
+
+#cabecalho {
+    height: 320px;
+    width: 100%;
+    background-color: #FFC901;
+    background-image: url('../img/background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size:  100%;
+}
+
+#content_cabecalho {
+    display: flex;
+    height: 100%;
+    margin-left: 0;
+    padding: 1.5rem;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#pesquisar_cab {
+    position: relative;
+    text-align: left;
+    font-size: .875rem;
+    text-align: left;
+    border: 1px solid #e6e6e6;
+    color: #222222;
+    width: 100%;
+    box-shadow: none;
+    display: inline-flex;
+    justify-content: flex-start;
+    min-height: 41px;
+    padding: 10px 24px;
+    appearance: none;
+    outline: none;
+}
+
+#topo {
+    margin-bottom: 1.5rem;
+    color: #414142;
+    font-weight: 600;
+    line-height: 1.125;
+    font-size: 40px;
+    text-align: left;
+    max-width: 700px;
+}
+
+.pesquisar {
+    margin-bottom: 24px;
+    position: relative;
+    text-align: left;
+    font-size: .875rem;
+    text-align: left;
+    border: 1px solid #e6e6e6;
+    color: #222222;
+    width: 100%;
+    box-shadow: none;
+    display: inline-flex;
+    justify-content: flex-start;
+    min-height: 41px;
+    padding: 10px 24px;
+    appearance: none;
+    outline: none;
+}
+
+.pesquisar:focus {
+    border: 1px solid #ffcb03;
+}
+
+.info {
+    padding: 30px;
+    background-color: #eaeaea;
+    margin-bottom: 50px;
+    font-size: 13px;
+}
+
+.info p {
+    margin: 0;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+#content_1 { 
+    width: 66.6666%;
+}
+
+#content_2 {
+    width: 33.3333%;
+}
+
+@media print, screen and (min-width: 768px) {
+    .wrapper {
+        
+    }
+
+    #content {
+        width: 75%;
+    }
+
+    #cabecalho {
+        background-size: 100%;
+    }
+
+    #content_cabecalho {
+        margin-left: 25%;
+        padding-left: 1.5rem;
+    }
+
+    #pesquisar_cab {
+        width: 50%;
+    }
+    
+    #sidebar {
+        display: flex;
+    }
+
+    #header {
+        padding-inline: 16px;
+        padding-left: 16px;
+    }
+
+    ::-webkit-scrollbar {
+        background-color: transparent;
+        height: 10px;
+        transition: background-color .2s linear;
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #aaa;
+        background-clip: padding-box;
+        border: 2px solid transparent;
+        border-radius: 1px;
+        transition: background-color .2s linear;
+    }
+}
+
+@media print, screen and (max-width: 1020px) {
+    #topo {
+        font-size: 30px;
+    }
+
+    h2, h4 {
+        font-size: 20px;
+    }
+}
+
+@media print, screen and (max-width: 550px) {
+    #topo {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    h2, h4 {
+        font-size: 15px;
+    }
+
+    #content, #content_cabecalho {
+        padding: 12px;
+    }
+}
+
+@media print, screen and (min-width: 1800px) {
+    #header {
+    padding-left: calc(50% - 884px);
+    padding-right: calc(50% - 884px);
+    }
+
+    .wrapper {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1768px;
+        width: 1768px;
+    }
+}
