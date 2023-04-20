@@ -9,26 +9,26 @@
     <title>Documentação</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="static/css/sidebar.css">
-    <link rel="stylesheet" href="static/css/base.css">
+    <link rel="stylesheet" href="src/static/css/sidebar.css">
+    <link rel="stylesheet" href="src/static/css/base.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="static/css/prism-line-numbers.css">
-    <link rel="stylesheet" href="static/css/go-top.css">
+    <link rel="stylesheet" href="src/static/css/prism-line-numbers.css">
+    <link rel="stylesheet" href="src/static/css/go-top.css">
 </head>
 
 <body class="line-numbers">
     <section id="header">
         <div id="header1">
-         <a id="content_logomarca" href="">
-                <img id="logomarca" src="static/img/logomarca.png">
+            <a id="content_logomarca" href="">
+                <img id="logomarca" src="src/static/img/logomarca.png">
             </a>
         </div>
     </section>
     <div id="cabecalho">
         <div id="content_cabecalho">
-            <h2 id="topo" class="mt-2 mb-4">Documentação </h2>
+            <h2 id="topo" class="mt-2 mb-4">Documentação Documentação Plataforma Nilo Peçanha 2023</h2>
             <input id="pesquisar_cab" type="search" placeholder="procurar" aria-label="Search">
         </div>
     </div>
@@ -43,9 +43,6 @@
                     </li>
                     <li class="li_button">
                         <a class="button_sidebar" href="#geral">Geral</a>
-                    </li>
-                    <li>
-                        <a class="button_sidebar" href="#relationships">Modelo</a>
                     </li>
                     <li>
                          <a class="button_sidebar" data-bs-toggle="collapse" href="#collapsecalctables" role="button" aria-expanded="false" aria-controls="collapsecalctables">
@@ -128,6 +125,10 @@
                                 
                                     <li class="li_button">
                                         <a href="#ID_dimFuncao">_dimFuncao</a>
+                                    </li>
+                                
+                                    <li class="li_button">
+                                        <a href="#ID@project">@project</a>
                                     </li>
                                 
                             </ul>
@@ -372,28 +373,25 @@
             </div>
 
             <div data-bs-spy="scroll" data-bs-target="#sidebar" data-bs-offset="0" class="scrollspy-example" tabindex="0">
-                <h2 id="topo" class="mt-2 mb-4 text-center">Documentação </h2>
+                <h2 id="topo" class="mt-2 mb-4 text-center">Documentação Documentação Plataforma Nilo Peçanha 2023</h2>
   
                 <!-- Project description -->
-                <h4 id="geral"></h4>
+                <h3 id="geral">Documentação Plataforma Nilo Peçanha 2023</h3>
+                
+                    <p> Versão: 0.1.1 </p>
                  
+                
+                    <p> Equipe: Equipe DSBR 2023 </p>
                  
+                
+                    <p> Data: 20/04/2023 </p>
                 
                 
 
                 <!-- End Project Description -->
 
                 <br>
-                <embed src="static/documentacao.pdf" type="application/pdf" width="100%" height="800">
-
-                <hr class="solid">
-                
-                <!-- Model schema -->
-                <div id="relationships">
-                    <h2 id="sobre">Modelo</h2>
-                    <svg width="1800" height="800"></svg>
-                </div>
-                <!-- End Model Schema -->
+                <embed src="src/static/documentacao.pdf" type="application/pdf" width="100%" height="800">
 
                 <br>
                 <hr class="solid">
@@ -418,7 +416,57 @@
                      
                     
                         <div class="container">
-                            <pre class="line-numbers"><code class="language-dax">{    ("Sem detalhe", NAMEOF([EmBranco]), 0),    ("Classificação Racial", NAMEOF('dimRendaRaca'[CorRaca]), 01),    ("Renda Familiar", NAMEOF('dimRendaRaca'[RendaFamiliar]), 02),    ("Sexo", NAMEOF('dimSexoIdade'[Sexo]), 03),    ("Faixa Etária", NAMEOF('dimSexoIdade'[FaixaEtaria]), 04),    ("Instituição", NAMEOF('dimUnidade'[Instituicao]), 05),    ("Unidade", NAMEOF('dimUnidade'[nomeUnidadeRecente]), 06),    ("Região", NAMEOF('d_IES'[Região]), 07),    ("Estado", NAMEOF('d_IES'[Estado]), 08),    ("Município", NAMEOF('dimUnidade'[Município]), 09),    ("Organização Acadêmica", NAMEOF(d_IES[Organização Acadêmica PNP]), 10),    ("Organização Acadêmica PNP", NAMEOF(d_IES[Organização Acadêmica Sigla PNP]), 11),    ("Eixo Tecnológico", NAMEOF(dimCurso[tipoEixoTecnologico]), 12),    ("Subeixo Tecnológico", NAMEOF(dimCurso[SubeixoTecnologico]), 14),    ("Tipo de Curso", NAMEOF(dimCurso[tipoCurso]), 15),    ("Nome do Curso", NAMEOF(dimCurso[nomeCurso]), 16),    ("Tipo de Oferta", NAMEOF(dimCurso[tipoOferta]), 17),    ("Modalidade de Ensino", NAMEOF(dimCurso[ModalidadeEnsino]), 18),    ("Fonte de Financiamento", NAMEOF(dimFinanciamento[nomeFonteFinanciamento]), 19),    ("Turno do Curso", NAMEOF(dimCurso[turnoCurso]), 20)}</code></pre>
+                            <pre class="line-numbers"><code class="language-dax">EVALUATE
+
+(
+
+    {
+
+        ( "Sem detalhe", NAMEOF ( [EmBranco] ), 0 ),
+
+        ( "Classificação Racial", NAMEOF ( 'dimRendaRaca'[CorRaca] ), 01 ),
+
+        ( "Renda Familiar", NAMEOF ( 'dimRendaRaca'[RendaFamiliar] ), 02 ),
+
+        ( "Sexo", NAMEOF ( 'dimSexoIdade'[Sexo] ), 03 ),
+
+        ( "Faixa Etária", NAMEOF ( 'dimSexoIdade'[FaixaEtaria] ), 04 ),
+
+        ( "Instituição", NAMEOF ( 'dimUnidade'[Instituicao] ), 05 ),
+
+        ( "Unidade", NAMEOF ( 'dimUnidade'[nomeUnidadeRecente] ), 06 ),
+
+        ( "Região", NAMEOF ( 'd_IES'[Região] ), 07 ),
+
+        ( "Estado", NAMEOF ( 'd_IES'[Estado] ), 08 ),
+
+        ( "Município", NAMEOF ( 'dimUnidade'[Município] ), 09 ),
+
+        ( "Organização Acadêmica", NAMEOF ( d_IES[Organização Acadêmica PNP] ), 10 ),
+
+        ( "Organização Acadêmica PNP", NAMEOF ( d_IES[Organização Acadêmica Sigla PNP] ), 11 ),
+
+        ( "Eixo Tecnológico", NAMEOF ( dimCurso[tipoEixoTecnologico] ), 12 ),
+
+        ( "Subeixo Tecnológico", NAMEOF ( dimCurso[SubeixoTecnologico] ), 14 ),
+
+        ( "Tipo de Curso", NAMEOF ( dimCurso[tipoCurso] ), 15 ),
+
+        ( "Nome do Curso", NAMEOF ( dimCurso[nomeCurso] ), 16 ),
+
+        ( "Tipo de Oferta", NAMEOF ( dimCurso[tipoOferta] ), 17 ),
+
+        ( "Modalidade de Ensino", NAMEOF ( dimCurso[ModalidadeEnsino] ), 18 ),
+
+        ( "Fonte de Financiamento", NAMEOF ( dimFinanciamento[nomeFonteFinanciamento] ), 19 ),
+
+        ( "Turno do Curso", NAMEOF ( dimCurso[turnoCurso] ), 20 )
+
+    }
+
+)
+
+</code></pre>
                         </div>
                     
                     
@@ -462,7 +510,31 @@
                      
                     
                         <div class="container">
-                            <pre class="line-numbers"><code class="language-dax">{    ("Sem detalhamento", Nameof('_ExpTítulos'[EmBranco]), 0),    ("Instituição", NAMEOF('dimUnidade'[Instituicao]), 1),    ("Sigla | Unidade", NAMEOF('dimUnidade'[Instituição | Unidade]), 2),    ("Unidade", NAMEOF('dimUnidade'[nomeUnidadeRecente]), 3),    ("Região", NAMEOF(d_IES[Região]), 4),    ("Estado", NAMEOF(d_IES[Estado]), 5),    ("Município", NAMEOF('dimUnidade'[Município]), 6)}</code></pre>
+                            <pre class="line-numbers"><code class="language-dax">EVALUATE
+
+(
+
+    {
+
+        ( "Sem detalhamento", NAMEOF ( '_ExpTítulos'[EmBranco] ), 0 ),
+
+        ( "Instituição", NAMEOF ( 'dimUnidade'[Instituicao] ), 1 ),
+
+        ( "Sigla | Unidade", NAMEOF ( 'dimUnidade'[Instituição | Unidade] ), 2 ),
+
+        ( "Unidade", NAMEOF ( 'dimUnidade'[nomeUnidadeRecente] ), 3 ),
+
+        ( "Região", NAMEOF ( d_IES[Região] ), 4 ),
+
+        ( "Estado", NAMEOF ( d_IES[Estado] ), 5 ),
+
+        ( "Município", NAMEOF ( 'dimUnidade'[Município] ), 6 )
+
+    }
+
+)
+
+</code></pre>
                         </div>
                     
                     
@@ -484,7 +556,11 @@
                      
                     
                         <div class="container">
-                            <pre class="line-numbers"><code class="language-dax">{"."}</code></pre>
+                            <pre class="line-numbers"><code class="language-dax">EVALUATE
+
+( { "." } )
+
+</code></pre>
                         </div>
                     
                     
@@ -506,7 +582,15 @@
                      
                     
                         <div class="container">
-                            <pre class="line-numbers"><code class="language-dax">DATATABLE (    "Ordem", INTEGER,    "Ind", STRING,    {        { 1, "LY"},        { 2, "SPLY"}    })</code></pre>
+                            <pre class="line-numbers"><code class="language-dax">EVALUATE
+
+(
+
+    DATATABLE ( "Ordem", INTEGER, "Ind", STRING, { { 1, "LY" }, { 2, "SPLY" } } )
+
+)
+
+</code></pre>
                         </div>
                     
                     
@@ -528,7 +612,75 @@
                      
                     
                         <div class="container">
-                            <pre class="line-numbers"><code class="language-dax">{    /*%%%%% Sem Detalhamento %%%%%*/	/*("Sem Detalhamento", NAMEOF([EmBranco]), 0, "Sem Detalhamento", 0),*/	/*%%%%% Programação Orçamentária %%%%%*/		("Projeto de Lei", NAMEOF([Projeto de Lei]), 1, "Programação Orçamentária", 1),	("Dotação Inicial", NAMEOF([Dotação inicial]), 2, "Programação Orçamentária", 1),	("Dotação Atualizada", NAMEOF([Dotação atualizada]), 3, "Programação Orçamentária", 1),	("Crédito Adicional", NAMEOF([Dotação adicional]), 4, "Programação Orçamentária", 1),	("Cancelado e/ou Remanejado", NAMEOF([Dotação Cancelada e Remanejada]), 5, "Programação Orçamentária", 1),    /* %%%%% Execução do Exercício %%%%% */		("Dotação Atualizada", NAMEOF([Dotação atualizada]), 7, "Execução do Exercício", 2),    ("Despesa Empenhada", NAMEOF([Despesa empenhada]), 8, "Execução do Exercício", 2),	("Despesa Liquidada", NAMEOF([Despesa liquidada]), 9, "Execução do Exercício", 2),	("Despesa Paga", NAMEOF([Despesa paga]), 10, "Execução do Exercício", 2),	("Empenhado a liquidar", NAMEOF([Despesa empenhada a liquidar]), 11, "Execução do Exercício", 2),    ("Crédito Disponível", NAMEOF([Crédito Disponível]), 12, "Execução do Exercício", 2),    /*%%%%% Restos a pagar %%%%%*/		("RAP Inscrito e Reinscrito", NAMEOF([RAP Inscrito e Reinscrito]), 13, "Restos a Pagar", 3),	("Não processados a liquidar", NAMEOF([RAP não processados a liquidar]), 14, "Restos a Pagar", 3),	("RAP a Pagar", NAMEOF([RAP a pagar]), 15, "Restos a Pagar", 3),	("RAP Pago", NAMEOF([RAP Pago]), 16, "Restos a Pagar", 3),	("RAP Bloqueado", NAMEOF([RAP Bloqueado]), 17, "Restos a Pagar", 3),	("RAP Cancelado", NAMEOF([RAP Cancelado]), 18, "Restos a Pagar", 3),    /*%%%%% Descentralizações %%%%%*/	 	("Destaque Recebido", NAMEOF([Destaque Recebido]), 19, "Descentralizações", 4), /* ("Destaque Concedido", NAMEOF([Destaque Concedido]), 20, "Descentralizações", 4), */	("Despesa Empenhada", NAMEOF([Despesa empenhada]),21, "Descentralizações", 4),	("Despesa Liquidada", NAMEOF([Despesa liquidada]), 22, "Descentralizações", 4),	("Despesa Paga", NAMEOF([Despesa paga]), 23, "Descentralizações", 4),	("Empenhado a liquidar", NAMEOF([Despesa empenhada a liquidar]), 24, "Descentralizações", 4),	("Crédito Disponível", NAMEOF([Crédito Disponível]), 25,  "Descentralizações", 4),	/* %%%%% Exercício e RP%%%%% */		("Despesa Empenhada", NAMEOF([Despesa empenhada]), 26, "Exercício e RP", 5),	("Despesa Liquidada", NAMEOF([Despesa liquidada]), 27, "Exercício e RP", 5),	("Despesa Paga", NAMEOF([Despesa paga]), 28, "Exercício e RP", 5),    ("Empenhado a liquidar", NAMEOF([Despesa empenhada a liquidar]), 29, "Exercício e RP", 5),	("Liquidação Total", NAMEOF([Despesa liq&RP]), 30, "Exercício e RP", 5),	("Pagamento Total", NAMEOF([Pagamento Total]), 31, "Exercício e RP", 5)}</code></pre>
+                            <pre class="line-numbers"><code class="language-dax">EVALUATE
+
+(
+
+    {
+
+        ( "Projeto de Lei", NAMEOF ( [Projeto de Lei] ), 1, "Programação Orçamentária", 1 ),
+
+        ( "Dotação Inicial", NAMEOF ( [Dotação inicial] ), 2, "Programação Orçamentária", 1 ),
+
+        ( "Dotação Atualizada", NAMEOF ( [Dotação atualizada] ), 3, "Programação Orçamentária", 1 ),
+
+        ( "Crédito Adicional", NAMEOF ( [Dotação adicional] ), 4, "Programação Orçamentária", 1 ),
+
+        ( "Cancelado e/ou Remanejado", NAMEOF ( [Dotação Cancelada e Remanejada] ), 5, "Programação Orçamentária", 1 ),
+
+        ( "Dotação Atualizada", NAMEOF ( [Dotação atualizada] ), 7, "Execução do Exercício", 2 ),
+
+        ( "Despesa Empenhada", NAMEOF ( [Despesa empenhada] ), 8, "Execução do Exercício", 2 ),
+
+        ( "Despesa Liquidada", NAMEOF ( [Despesa liquidada] ), 9, "Execução do Exercício", 2 ),
+
+        ( "Despesa Paga", NAMEOF ( [Despesa paga] ), 10, "Execução do Exercício", 2 ),
+
+        ( "Empenhado a liquidar", NAMEOF ( [Despesa empenhada a liquidar] ), 11, "Execução do Exercício", 2 ),
+
+        ( "Crédito Disponível", NAMEOF ( [Crédito Disponível] ), 12, "Execução do Exercício", 2 ),
+
+        ( "RAP Inscrito e Reinscrito", NAMEOF ( [RAP Inscrito e Reinscrito] ), 13, "Restos a Pagar", 3 ),
+
+        ( "Não processados a liquidar", NAMEOF ( [RAP não processados a liquidar] ), 14, "Restos a Pagar", 3 ),
+
+        ( "RAP a Pagar", NAMEOF ( [RAP a pagar] ), 15, "Restos a Pagar", 3 ),
+
+        ( "RAP Pago", NAMEOF ( [RAP Pago] ), 16, "Restos a Pagar", 3 ),
+
+        ( "RAP Bloqueado", NAMEOF ( [RAP Bloqueado] ), 17, "Restos a Pagar", 3 ),
+
+        ( "RAP Cancelado", NAMEOF ( [RAP Cancelado] ), 18, "Restos a Pagar", 3 ),
+
+        ( "Destaque Recebido", NAMEOF ( [Destaque Recebido] ), 19, "Descentralizações", 4 ),
+
+        ( "Despesa Empenhada", NAMEOF ( [Despesa empenhada] ), 21, "Descentralizações", 4 ),
+
+        ( "Despesa Liquidada", NAMEOF ( [Despesa liquidada] ), 22, "Descentralizações", 4 ),
+
+        ( "Despesa Paga", NAMEOF ( [Despesa paga] ), 23, "Descentralizações", 4 ),
+
+        ( "Empenhado a liquidar", NAMEOF ( [Despesa empenhada a liquidar] ), 24, "Descentralizações", 4 ),
+
+        ( "Crédito Disponível", NAMEOF ( [Crédito Disponível] ), 25, "Descentralizações", 4 ),
+
+        ( "Despesa Empenhada", NAMEOF ( [Despesa empenhada] ), 26, "Exercício e RP", 5 ),
+
+        ( "Despesa Liquidada", NAMEOF ( [Despesa liquidada] ), 27, "Exercício e RP", 5 ),
+
+        ( "Despesa Paga", NAMEOF ( [Despesa paga] ), 28, "Exercício e RP", 5 ),
+
+        ( "Empenhado a liquidar", NAMEOF ( [Despesa empenhada a liquidar] ), 29, "Exercício e RP", 5 ),
+
+        ( "Liquidação Total", NAMEOF ( [Despesa liq&RP] ), 30, "Exercício e RP", 5 ),
+
+        ( "Pagamento Total", NAMEOF ( [Pagamento Total] ), 31, "Exercício e RP", 5 )
+
+    }
+
+)
+
+</code></pre>
                         </div>
                     
                     
@@ -550,7 +702,47 @@
                      
                     
                         <div class="container">
-                            <pre class="line-numbers"><code class="language-dax">{    ("Sem detalhamento", NAMEOF([EmBranco]), 0),    ("Instituição", NAMEOF(d_IES[Sigla]), 1),    ("Região", NAMEOF(d_IES[Região]), 2),    ("Estado", NAMEOF(d_IES[Estado]), 3),    ("Identificador de Resultado (RP)", NAMEOF(ResultadoPrimario[Resultado Primário (Cidadã)]), 4),    ("Unidade Orçamentária", NAMEOF(UnidadeOrgao[Cód_UO]), 5),    ("Programa Orçamentário", NAMEOF(PTRES[Cód_Programa]), 6),    ("Ação Orçamentária", NAMEOF(PTRES[Cód_Ação]), 7),    ("Plano Orçamentário", NAMEOF(PTRES[Cód_PlanoOrçamentário]), 8),    ("Fonte de Recursos", NAMEOF(Fonte[Cód_Fonte]), 9),    ("Grupo de Despesas (GND)", NAMEOF(NaturezaDespesa[GrupoNatDespesa]), 10),    ("Item de Despesa", NAMEOF(NaturezaDespesa[ItemDespesa]), 11),    ("Organização Acadêmica", NAMEOF(d_IES[Organização Acadêmica Sigla PNP]), 12)}</code></pre>
+                            <pre class="line-numbers"><code class="language-dax">EVALUATE
+
+(
+
+    {
+
+        ( "Sem detalhamento", NAMEOF ( [EmBranco] ), 0 ),
+
+        ( "Instituição", NAMEOF ( d_IES[Sigla] ), 1 ),
+
+        ( "Região", NAMEOF ( d_IES[Região] ), 2 ),
+
+        ( "Estado", NAMEOF ( d_IES[Estado] ), 3 ),
+
+        ( "Identificador de Resultado (RP)", NAMEOF ( ResultadoPrimario[Resultado Primário (Cidadã)] ), 4 ),
+
+        ( "Unidade Orçamentária", NAMEOF ( UnidadeOrgao[Cód_UO] ), 5 ),
+
+        ( "Programa Orçamentário", NAMEOF ( PTRES[Cód_Programa] ), 6 ),
+
+        ( "Ação Orçamentária", NAMEOF ( PTRES[Cód_Ação] ), 7 ),
+
+        ( "Plano Orçamentário", NAMEOF ( PTRES[Cód_PlanoOrçamentário] ), 8 ),
+
+        ( "Fonte de Recursos", NAMEOF ( Fonte[Cód_Fonte] ), 9 ),
+
+        ( "Grupo de Despesas (GND)", NAMEOF ( NaturezaDespesa[GrupoNatDespesa] ), 10 ),
+
+        ( "Elemento de Despesa", NAMEOF ( NaturezaDespesa[Cód_ElementoDespesa] ), 11 ),
+
+        ( "Natureza de Despesa Detalhada", NAMEOF ( NaturezaDespesa[Cód_NaturezaDespesaDetalhada] ), 12 ),
+
+        ( "Item de Despesa", NAMEOF ( NaturezaDespesa[ItemDespesa] ), 13 ),
+
+        ( "Organização Acadêmica", NAMEOF ( d_IES[Organização Acadêmica Sigla PNP] ), 14 )
+
+    }
+
+)
+
+</code></pre>
                         </div>
                     
                     
@@ -572,7 +764,11 @@
                      
                     
                         <div class="container">
-                            <pre class="line-numbers"><code class="language-dax">{    ("Name", NAMEOF('dCalendInterval'[Name]), 0)}</code></pre>
+                            <pre class="line-numbers"><code class="language-dax">EVALUATE
+
+( { ( "Name", NAMEOF ( 'dCalendInterval'[Name] ), 0 ) } )
+
+</code></pre>
                         </div>
                     
                     
@@ -594,7 +790,71 @@
                      
                     
                         <div class="container">
-                            <pre class="line-numbers"><code class="language-dax">{    /*%%%%% Sem Detalhamento %%%%%*/		("Sem Detalhamento", NAMEOF([EmBranco]), 0, "Sem Detalhamento", 0),		/*%%%%% Programação Orçamentária %%%%%*/		("Projeto de Lei", NAMEOF([Projeto de Lei]), 1, "Programação Orçamentária", 1),	("Orçamento Inicial", NAMEOF([Dotação inicial]), 2, "Programação Orçamentária", 1),	("Orçamento Atualizado", NAMEOF([Dotação atualizada]), 3, "Programação Orçamentária", 1),	("Crédito Adicional", NAMEOF([Dotação adicional]), 4, "Programação Orçamentária", 1),	("Cancelado e/ou Remanejado", NAMEOF([Dotação Cancelada e Remanejada]), 5, "Programação Orçamentária", 1),	("Destaque Recebido", NAMEOF([Destaque Recebido]), 6, "Programação Orçamentária", 1),	("Destaque Concedido", NAMEOF([Destaque Concedido]), 7, "Programação Orçamentária", 1),		/* %%%%% Execução do Exercício %%%%% */		("Despesa Empenhada", NAMEOF([Despesa empenhada]), 8, "Execução do Exercício", 2),	("Despesa Liquidada", NAMEOF([Despesa liquidada]), 9, "Execução do Exercício", 2),	("Despesa Paga", NAMEOF([Despesa paga]), 10, "Execução do Exercício", 2),	("Liquidação Total", NAMEOF([Despesa liq&RP]), 11, "Execução do Exercício", 2),	("Empenhado a liquidar", NAMEOF([Despesa empenhada a liquidar]), 12, "Execução do Exercício", 2),	("Pagamento Total", NAMEOF([Pagamento Total]), 13, "Execução do Exercício", 2),	("Crédito Disponível", NAMEOF([Crédito Disponível]), 14, "Execução do Exercício", 2),		/*%%%%% Restos a pagar %%%%%*/		("RAP Inscrito e Reinscrito", NAMEOF([RAP Inscrito e Reinscrito]), 15, "Restos a Pagar", 3),	("Não processados a liquidar", NAMEOF([RAP não processados a liquidar]), 16, "Restos a Pagar", 3),	("RAP a Pagar", NAMEOF([RAP a pagar]), 17, "Restos a Pagar", 3),	("RAP Pago", NAMEOF([RAP Pago]), 18, "Restos a Pagar", 3),	("RAP Bloqueado", NAMEOF([RAP Bloqueado]), 19, "Restos a Pagar", 3),	("RAP Cancelado", NAMEOF([RAP Cancelado]), 20, "Restos a Pagar", 3),		/*%%%%% Descentralizações %%%%%*/		("Destaque Recebido", NAMEOF([Destaque Recebido]), 21, "Descentralizações", 4),	("Crédito Disponível", NAMEOF([Crédito Disponível]), 22,  "Descentralizações", 4),	("Despesa Empenhada", NAMEOF([Despesa empenhada]), 23, "Descentralizações", 4),	("Despesa Liquidada", NAMEOF([Despesa liquidada]), 24, "Descentralizações", 4),	("Despesa Paga", NAMEOF([Despesa paga]), 25, "Descentralizações", 4),	("Empenhado a liquidar", NAMEOF([Despesa empenhada a liquidar]), 26, "Descentralizações", 4)}</code></pre>
+                            <pre class="line-numbers"><code class="language-dax">EVALUATE
+
+(
+
+    {
+
+        ( "Sem Detalhamento", NAMEOF ( [EmBranco] ), 0, "Sem Detalhamento", 0 ),
+
+        ( "Projeto de Lei", NAMEOF ( [Projeto de Lei] ), 1, "Programação Orçamentária", 1 ),
+
+        ( "Orçamento Inicial", NAMEOF ( [Dotação inicial] ), 2, "Programação Orçamentária", 1 ),
+
+        ( "Orçamento Atualizado", NAMEOF ( [Dotação atualizada] ), 3, "Programação Orçamentária", 1 ),
+
+        ( "Crédito Adicional", NAMEOF ( [Dotação adicional] ), 4, "Programação Orçamentária", 1 ),
+
+        ( "Cancelado e/ou Remanejado", NAMEOF ( [Dotação Cancelada e Remanejada] ), 5, "Programação Orçamentária", 1 ),
+
+        ( "Destaque Recebido", NAMEOF ( [Destaque Recebido] ), 6, "Programação Orçamentária", 1 ),
+
+        ( "Destaque Concedido", NAMEOF ( [Destaque Concedido] ), 7, "Programação Orçamentária", 1 ),
+
+        ( "Despesa Empenhada", NAMEOF ( [Despesa empenhada] ), 8, "Execução do Exercício", 2 ),
+
+        ( "Despesa Liquidada", NAMEOF ( [Despesa liquidada] ), 9, "Execução do Exercício", 2 ),
+
+        ( "Despesa Paga", NAMEOF ( [Despesa paga] ), 10, "Execução do Exercício", 2 ),
+
+        ( "Liquidação Total", NAMEOF ( [Despesa liq&RP] ), 11, "Execução do Exercício", 2 ),
+
+        ( "Empenhado a liquidar", NAMEOF ( [Despesa empenhada a liquidar] ), 12, "Execução do Exercício", 2 ),
+
+        ( "Pagamento Total", NAMEOF ( [Pagamento Total] ), 13, "Execução do Exercício", 2 ),
+
+        ( "Crédito Disponível", NAMEOF ( [Crédito Disponível] ), 14, "Execução do Exercício", 2 ),
+
+        ( "RAP Inscrito e Reinscrito", NAMEOF ( [RAP Inscrito e Reinscrito] ), 15, "Restos a Pagar", 3 ),
+
+        ( "Não processados a liquidar", NAMEOF ( [RAP não processados a liquidar] ), 16, "Restos a Pagar", 3 ),
+
+        ( "RAP a Pagar", NAMEOF ( [RAP a pagar] ), 17, "Restos a Pagar", 3 ),
+
+        ( "RAP Pago", NAMEOF ( [RAP Pago] ), 18, "Restos a Pagar", 3 ),
+
+        ( "RAP Bloqueado", NAMEOF ( [RAP Bloqueado] ), 19, "Restos a Pagar", 3 ),
+
+        ( "RAP Cancelado", NAMEOF ( [RAP Cancelado] ), 20, "Restos a Pagar", 3 ),
+
+        ( "Destaque Recebido", NAMEOF ( [Destaque Recebido] ), 21, "Descentralizações", 4 ),
+
+        ( "Crédito Disponível", NAMEOF ( [Crédito Disponível] ), 22, "Descentralizações", 4 ),
+
+        ( "Despesa Empenhada", NAMEOF ( [Despesa empenhada] ), 23, "Descentralizações", 4 ),
+
+        ( "Despesa Liquidada", NAMEOF ( [Despesa liquidada] ), 24, "Descentralizações", 4 ),
+
+        ( "Despesa Paga", NAMEOF ( [Despesa paga] ), 25, "Descentralizações", 4 ),
+
+        ( "Empenhado a liquidar", NAMEOF ( [Despesa empenhada a liquidar] ), 26, "Descentralizações", 4 )
+
+    }
+
+)
+
+</code></pre>
                         </div>
                     
                     
@@ -616,7 +876,33 @@
                      
                     
                         <div class="container">
-                            <pre class="line-numbers"><code class="language-dax">{    /* ("Eficiência Acadêmica %", NAMEOF('fSituaçãoMatrícula'[Eficiência Acadêmica | Índice de Eficiência Acadêmica %]), 0, "Valor %"), */    ("Conclusão Ciclo %", NAMEOF('fSituaçãoMatrícula'[Eficiência Acadêmica | Concluídos %]), 1, "Valor %"),    ("Evasão Ciclo %", NAMEOF('fSituaçãoMatrícula'[Eficiência Acadêmica | Taxa de Evasão %]), 2, "Valor %"),    ("Retenção Ciclo %", NAMEOF('fSituaçãoMatrícula'[Eficiência Acadêmica | Retidos %]), 3, "Valor %"),    ("Conclusão Ciclo", NAMEOF('fSituaçãoMatrícula'[Eficiência Acadêmica | Concluídos]), 4, "Valor Absoluto"),    ("Evasão Ciclo", NAMEOF('fSituaçãoMatrícula'[Eficiência Acadêmica | Número de Evadidos]), 5, "Valor Absoluto"),    ("Retenção Ciclo", NAMEOF('fSituaçãoMatrícula'[Eficiência Acadêmica | Retidos]), 6, "Valor Absoluto")}</code></pre>
+                            <pre class="line-numbers"><code class="language-dax">EVALUATE
+
+(
+
+    {
+
+        ( "Eficiência Acadêmica", NAMEOF ( 'fSituaçãoMatrícula'[Eficiência Acadêmica | Índice de Eficiência Acadêmica %] ), 0, "Valor %" ),
+
+        ( "Eficiência Acadêmica", NAMEOF ( 'fSituaçãoMatrícula'[Eficiência Acadêmica | Índice de Eficiência Acadêmica %] ), 1, "Valor Absoluto" ),
+
+        ( "Conclusão Ciclo %", NAMEOF ( 'fSituaçãoMatrícula'[Eficiência Acadêmica | Concluídos %] ), 2, "Valor %" ),
+
+        ( "Evasão Ciclo %", NAMEOF ( 'fSituaçãoMatrícula'[Eficiência Acadêmica | Taxa de Evasão %] ), 3, "Valor %" ),
+
+        ( "Retenção Ciclo %", NAMEOF ( 'fSituaçãoMatrícula'[Eficiência Acadêmica | Retidos %] ), 4, "Valor %" ),
+
+        ( "Conclusão Ciclo", NAMEOF ( 'fSituaçãoMatrícula'[Eficiência Acadêmica | Concluídos] ), 5, "Valor Absoluto" ),
+
+        ( "Evasão Ciclo", NAMEOF ( 'fSituaçãoMatrícula'[Eficiência Acadêmica | Número de Evadidos] ), 6, "Valor Absoluto" ),
+
+        ( "Retenção Ciclo", NAMEOF ( 'fSituaçãoMatrícula'[Eficiência Acadêmica | Retidos] ), 7, "Valor Absoluto" )
+
+    }
+
+)
+
+</code></pre>
                         </div>
                     
                     
@@ -638,7 +924,33 @@
                      
                     
                         <div class="container">
-                            <pre class="line-numbers"><code class="language-dax">{    ("Sem detalhe", NAMEOF('_ExpTítulos'[EmBranco]), 0),    ("Titulação", NAMEOF('fServidores | Microdados'[Titulação]), 1),    ("Jornada de Trabalho", NAMEOF('fServidores | Microdados'[Jornada_de_Trabalho]), 2),    ("Carreira", NAMEOF('fServidores | Microdados'[Vinculo_Carreira]), 3),    ("Classe", NAMEOF('fServidores | Microdados'[Vinculo_Classe]), 4),    ("RSC", NAMEOF('fServidores | Microdados'[Rsc]), 5),    ("Contrato", NAMEOF('fServidores | Microdados'[Vinculo_Contrato]), 6),    ("Vínculo Professor", NAMEOF('fServidores | Microdados'[Vinculo_Professor]), 7)    }</code></pre>
+                            <pre class="line-numbers"><code class="language-dax">EVALUATE
+
+(
+
+    {
+
+        ( "Sem detalhe", NAMEOF ( '_ExpTítulos'[EmBranco] ), 0 ),
+
+        ( "Titulação", NAMEOF ( 'fServidores | Microdados'[Titulação] ), 1 ),
+
+        ( "Jornada de Trabalho", NAMEOF ( 'fServidores | Microdados'[Jornada_de_Trabalho] ), 2 ),
+
+        ( "Carreira", NAMEOF ( 'fServidores | Microdados'[Vinculo_Carreira] ), 3 ),
+
+        ( "Classe", NAMEOF ( 'fServidores | Microdados'[Vinculo_Classe] ), 4 ),
+
+        ( "RSC", NAMEOF ( 'fServidores | Microdados'[Rsc] ), 5 ),
+
+        ( "Contrato", NAMEOF ( 'fServidores | Microdados'[Vinculo_Contrato] ), 6 ),
+
+        ( "Vínculo Professor", NAMEOF ( 'fServidores | Microdados'[Vinculo_Professor] ), 7 )
+
+    }
+
+)
+
+</code></pre>
                         </div>
                     
                     
@@ -660,7 +972,37 @@
                      
                     
                         <div class="container">
-                            <pre class="line-numbers"><code class="language-dax">{    ("Sem detalhamento", '_ExpTítulos'[EmBranco], 0),    ("Instituição", NAMEOF('dimUnidade'[Instituicao]), 1),    ("Sigla | Unidade", NAMEOF('dimUnidade'[Instituição | Unidade]), 2),    ("Unidade", NAMEOF('dimUnidade'[nomeUnidadeRecente]), 3),    ("Eixo Tecnológico", NAMEOF(fCiclos[tipoEixoTecnologico]), 4),    ("Tipo de curso",NAMEOF(fCiclos[tipoCurso]),5),    ("Tipo de Oferta",NAMEOF(fCiclos[tipoOferta]),6),    ("Região", NAMEOF('dimUnidade'[Regiao]), 7),    ("Estado", NAMEOF('dimUnidade'[UF]), 8),    ("Município", NAMEOF('dimUnidade'[Município]), 9)}</code></pre>
+                            <pre class="line-numbers"><code class="language-dax">EVALUATE
+
+(
+
+    {
+
+        ( "Sem detalhamento", '_ExpTítulos'[EmBranco], 0 ),
+
+        ( "Instituição", NAMEOF ( 'dimUnidade'[Instituicao] ), 1 ),
+
+        ( "Sigla | Unidade", NAMEOF ( 'dimUnidade'[Instituição | Unidade] ), 2 ),
+
+        ( "Unidade", NAMEOF ( 'dimUnidade'[nomeUnidadeRecente] ), 3 ),
+
+        ( "Eixo Tecnológico", NAMEOF ( fCiclos[tipoEixoTecnologico] ), 4 ),
+
+        ( "Tipo de curso", NAMEOF ( fCiclos[tipoCurso] ), 5 ),
+
+        ( "Tipo de Oferta", NAMEOF ( fCiclos[tipoOferta] ), 6 ),
+
+        ( "Região", NAMEOF ( 'dimUnidade'[Regiao] ), 7 ),
+
+        ( "Estado", NAMEOF ( 'dimUnidade'[UF] ), 8 ),
+
+        ( "Município", NAMEOF ( 'dimUnidade'[Município] ), 9 )
+
+    }
+
+)
+
+</code></pre>
                         </div>
                     
                     
@@ -682,7 +1024,35 @@
                      
                     
                         <div class="container">
-                            <pre class="line-numbers"><code class="language-dax">{    ("Sem detalhamento", NAMEOF('_ExpTítulos'[EmBranco]), 0),    ("Instituicao", NAMEOF('dimUnidade'[Instituicao]), 1),    ("Sigla | Unidade", NAMEOF('dimUnidade'[Instituição | Unidade]), 2),    ("Unidade", NAMEOF('dimUnidade'[nomeUnidadeRecente]), 3),    ("Eixo Tecnológico", NAMEOF('fCiclos'[tipoEixoTecnologico]), 4),    ("Tipo de Curso", NAMEOF('fCiclos'[tipoCurso]), 5),    ("Tipo de Oferta", NAMEOF('fCiclos'[tipoOferta]), 6),    ("Região", NAMEOF('d_IES'[Região]), 7),    ("Estado", NAMEOF('d_IES'[Estado]), 8)}</code></pre>
+                            <pre class="line-numbers"><code class="language-dax">EVALUATE
+
+(
+
+    {
+
+        ( "Sem detalhamento", NAMEOF ( '_ExpTítulos'[EmBranco] ), 0 ),
+
+        ( "Instituicao", NAMEOF ( 'dimUnidade'[Instituicao] ), 1 ),
+
+        ( "Sigla | Unidade", NAMEOF ( 'dimUnidade'[Instituição | Unidade] ), 2 ),
+
+        ( "Unidade", NAMEOF ( 'dimUnidade'[nomeUnidadeRecente] ), 3 ),
+
+        ( "Eixo Tecnológico", NAMEOF ( 'fCiclos'[tipoEixoTecnologico] ), 4 ),
+
+        ( "Tipo de Curso", NAMEOF ( 'fCiclos'[tipoCurso] ), 5 ),
+
+        ( "Tipo de Oferta", NAMEOF ( 'fCiclos'[tipoOferta] ), 6 ),
+
+        ( "Região", NAMEOF ( 'd_IES'[Região] ), 7 ),
+
+        ( "Estado", NAMEOF ( 'd_IES'[Estado] ), 8 )
+
+    }
+
+)
+
+</code></pre>
                         </div>
                     
                     
@@ -704,7 +1074,35 @@
                      
                     
                         <div class="container">
-                            <pre class="line-numbers"><code class="language-dax">{    ("Sem detalhamento", NAMEOF('_ExpTítulos'[EmBranco]), 0),    ("Instituição", NAMEOF('dimUnidade'[Instituicao]), 1),    ("Sigla | Unidade", NAMEOF('dimUnidade'[Instituição | Unidade]), 2),    ("Unidade", NAMEOF('dimUnidade'[nomeUnidadeRecente]), 3),    ("Eixo Tecnológico", NAMEOF('fCiclos'[tipoEixoTecnologico]), 4),    ("Tipo de Curso", NAMEOF('fCiclos'[tipoCurso]), 5),    ("Tipo de Oferta", NAMEOF('fCiclos'[tipoOferta]), 6),    ("Região", NAMEOF('d_IES'[Região]), 7),    ("Estado", NAMEOF('d_IES'[UF]), 8)}</code></pre>
+                            <pre class="line-numbers"><code class="language-dax">EVALUATE
+
+(
+
+    {
+
+        ( "Sem detalhamento", NAMEOF ( '_ExpTítulos'[EmBranco] ), 0 ),
+
+        ( "Instituição", NAMEOF ( 'dimUnidade'[Instituicao] ), 1 ),
+
+        ( "Sigla | Unidade", NAMEOF ( 'dimUnidade'[Instituição | Unidade] ), 2 ),
+
+        ( "Unidade", NAMEOF ( 'dimUnidade'[nomeUnidadeRecente] ), 3 ),
+
+        ( "Eixo Tecnológico", NAMEOF ( 'fCiclos'[tipoEixoTecnologico] ), 4 ),
+
+        ( "Tipo de Curso", NAMEOF ( 'fCiclos'[tipoCurso] ), 5 ),
+
+        ( "Tipo de Oferta", NAMEOF ( 'fCiclos'[tipoOferta] ), 6 ),
+
+        ( "Região", NAMEOF ( 'd_IES'[Região] ), 7 ),
+
+        ( "Estado", NAMEOF ( 'd_IES'[UF] ), 8 )
+
+    }
+
+)
+
+</code></pre>
                         </div>
                     
                     
@@ -726,7 +1124,39 @@
                      
                     
                         <div class="container">
-                            <pre class="line-numbers"><code class="language-dax">{    ("Insituição",NAMEOF(dimUnidade[Instituicao]),0),    ("Região", NAMEOF('d_IES'[Região]), 1),    ("Estado", NAMEOF('d_IES'[Estado]), 2),    ("Situação de Vínculo", NAMEOF(dimSitFuncional[Situacao]), 3),    ("Sexo", NAMEOF('dimSexoIdade'[Sexo]), 4),    ("Faixa Etária", NAMEOF('dimSexoIdade'[FaixaEtaria]), 5),    ("Jornada de Trabalho", NAMEOF('dimJornada'[DescricaoJornada]), 6),    ("Carreira", NAMEOF(dimCarreiras[CarreiraDescricao]), 7),    ("Escolaridade", NAMEOF('dimEscolaridade'[NivelEscolaridade]), 8),    ("Funcao", NAMEOF('dimFuncao'[FuncaoCompleto]), 9),    ("Função (Completo)", NAMEOF('dimFuncao'[FuncaoCompleto]), 10)}</code></pre>
+                            <pre class="line-numbers"><code class="language-dax">EVALUATE
+
+(
+
+    {
+
+        ( "Insituição", NAMEOF ( dimUnidade[Instituicao] ), 0 ),
+
+        ( "Região", NAMEOF ( 'd_IES'[Região] ), 1 ),
+
+        ( "Estado", NAMEOF ( 'd_IES'[Estado] ), 2 ),
+
+        ( "Situação de Vínculo", NAMEOF ( dimSitFuncional[Situacao] ), 3 ),
+
+        ( "Sexo", NAMEOF ( 'dimSexoIdade'[Sexo] ), 4 ),
+
+        ( "Faixa Etária", NAMEOF ( 'dimSexoIdade'[FaixaEtaria] ), 5 ),
+
+        ( "Jornada de Trabalho", NAMEOF ( 'dimJornada'[DescricaoJornada] ), 6 ),
+
+        ( "Carreira", NAMEOF ( dimCarreiras[CarreiraDescricao] ), 7 ),
+
+        ( "Escolaridade", NAMEOF ( 'dimEscolaridade'[NivelEscolaridade] ), 8 ),
+
+        ( "Funcao", NAMEOF ( 'dimFuncao'[FuncaoCompleto] ), 9 ),
+
+        ( "Função (Completo)", NAMEOF ( 'dimFuncao'[FuncaoCompleto] ), 10 )
+
+    }
+
+)
+
+</code></pre>
                         </div>
                     
                     
@@ -748,7 +1178,29 @@
                      
                     
                         <div class="container">
-                            <pre class="line-numbers"><code class="language-dax">{    ("Sem detalhe", NAMEOF('_ExpTítulos'[EmBranco]), 0),    ("Instituicao", NAMEOF('d_IES'[Sigla]), 1),    ("Unidade", NAMEOF(dimUnidade[nomeUnidadeRecente]), 2),    ("Região", NAMEOF('d_IES'[Região]), 3),    ("Estado", NAMEOF('d_IES'[Estado]), 4),    (" Área de Avaliação", NAMEOF('fCPC'[nomeArea]), 5)}</code></pre>
+                            <pre class="line-numbers"><code class="language-dax">EVALUATE
+
+(
+
+    {
+
+        ( "Sem detalhe", NAMEOF ( '_ExpTítulos'[EmBranco] ), 0 ),
+
+        ( "Instituicao", NAMEOF ( 'd_IES'[Sigla] ), 1 ),
+
+        ( "Unidade", NAMEOF ( dimUnidade[nomeUnidadeRecente] ), 2 ),
+
+        ( "Região", NAMEOF ( 'd_IES'[Região] ), 3 ),
+
+        ( "Estado", NAMEOF ( 'd_IES'[Estado] ), 4 ),
+
+        ( " Área de Avaliação", NAMEOF ( 'fCPC'[nomeArea] ), 5 )
+
+    }
+
+)
+
+</code></pre>
                         </div>
                     
                     
@@ -770,7 +1222,39 @@
                      
                     
                         <div class="container">
-                            <pre class="line-numbers"><code class="language-dax">{    ("Dotação Atualizada vs. Projeto de Lei", NAMEOF('IndicAcompOrc'[Dotação Atualizada vs. Projeto de Lei]), 0, "Programação Orçamentária", 1),    ("Dotação Atualizada vs. Dotação Inicial", NAMEOF('IndicAcompOrc'[Dotação Atualizada vs. Dotação Inicial]), 1, "Programação Orçamentária", 1),    ("Despesa Empenhada vs. Dotação Atualizada", NAMEOF('IndicAcompOrc'[Despesa Empenhada vs. Dotação Atualizada]), 2, "Execução do Exercício", 2),    ("Despesa Liquidada vs. Dotação Atualizada", NAMEOF('IndicAcompOrc'[Despesa Liquidada vs. Dotação Atualizada]), 3, "Execução do Exercício", 2),    ("Despesa Paga vs. Dotação Atualizada", NAMEOF('IndicAcompOrc'[Despesa Paga vs. Dotação Atualizada]), 4, "Execução do Exercício", 2),    ("Despesa Liquidada vs. Despesa Empenhada", NAMEOF('IndicAcompOrc'[Despesa Liquidada vs. Despesa Empenhada]), 5, "Execução do Exercício", 2),    ("Despesa Paga vs. Despesa Liquidada", NAMEOF('IndicAcompOrc'[Despesa Paga vs. Despesa Liquidada]), 6, "Execução do Exercício", 2),    ("RAP Não Proc. a liquidar vs. RAP Inscritos", NAMEOF('IndicAcompOrc'[RAP Não Proc. a liquidar vs. RAP Inscritos]), 7, "Restos a Pagar", 3),    ("RAP Pago vs. RAP Inscritos", NAMEOF('IndicAcompOrc'[RAP Pago vs. RAP Inscritos]), 8, "Restos a Pagar", 3),    ("RAP Cancelados vs. Rap Inscritos", NAMEOF('IndicAcompOrc'[RAP Cancelados vs. Rap Inscritos]), 9, "Restos a Pagar", 3),    ("RAP Bloqueados vs. Rap Inscritos", NAMEOF('IndicAcompOrc'[RAP Bloqueados vs. Rap Inscritos]), 10, "Restos a Pagar", 3)}</code></pre>
+                            <pre class="line-numbers"><code class="language-dax">EVALUATE
+
+(
+
+    {
+
+        ( "Dotação Atualizada vs. Projeto de Lei", NAMEOF ( 'IndicAcompOrc'[Dotação Atualizada vs. Projeto de Lei] ), 0, "Programação Orçamentária", 1 ),
+
+        ( "Dotação Atualizada vs. Dotação Inicial", NAMEOF ( 'IndicAcompOrc'[Dotação Atualizada vs. Dotação Inicial] ), 1, "Programação Orçamentária", 1 ),
+
+        ( "Despesa Empenhada vs. Dotação Atualizada", NAMEOF ( 'IndicAcompOrc'[Despesa Empenhada vs. Dotação Atualizada] ), 2, "Execução do Exercício", 2 ),
+
+        ( "Despesa Liquidada vs. Dotação Atualizada", NAMEOF ( 'IndicAcompOrc'[Despesa Liquidada vs. Dotação Atualizada] ), 3, "Execução do Exercício", 2 ),
+
+        ( "Despesa Paga vs. Dotação Atualizada", NAMEOF ( 'IndicAcompOrc'[Despesa Paga vs. Dotação Atualizada] ), 4, "Execução do Exercício", 2 ),
+
+        ( "Despesa Liquidada vs. Despesa Empenhada", NAMEOF ( 'IndicAcompOrc'[Despesa Liquidada vs. Despesa Empenhada] ), 5, "Execução do Exercício", 2 ),
+
+        ( "Despesa Paga vs. Despesa Liquidada", NAMEOF ( 'IndicAcompOrc'[Despesa Paga vs. Despesa Liquidada] ), 6, "Execução do Exercício", 2 ),
+
+        ( "RAP Não Proc. a liquidar vs. RAP Inscritos", NAMEOF ( 'IndicAcompOrc'[RAP Não Proc. a liquidar vs. RAP Inscritos] ), 7, "Restos a Pagar", 3 ),
+
+        ( "RAP Pago vs. RAP Inscritos", NAMEOF ( 'IndicAcompOrc'[RAP Pago vs. RAP Inscritos] ), 8, "Restos a Pagar", 3 ),
+
+        ( "RAP Cancelados vs. Rap Inscritos", NAMEOF ( 'IndicAcompOrc'[RAP Cancelados vs. Rap Inscritos] ), 9, "Restos a Pagar", 3 ),
+
+        ( "RAP Bloqueados vs. Rap Inscritos", NAMEOF ( 'IndicAcompOrc'[RAP Bloqueados vs. Rap Inscritos] ), 10, "Restos a Pagar", 3 )
+
+    }
+
+)
+
+</code></pre>
                         </div>
                     
                     
@@ -792,7 +1276,37 @@
                      
                     
                         <div class="container">
-                            <pre class="line-numbers"><code class="language-dax">{    ("Instituição", NAMEOF(d_IES[Sigla]), 0),    ("Cargo Efetivo", NAMEOF('dimCargos'[Cargo]), 1),    ("Carreira", NAMEOF(dimCarreiras[CarreiraDescricao]), 2),    ("Regime Juridico", NAMEOF('dimCargos'[RegimeJuridico]), 3),    /* ("Regime", NAMEOF('dimSitFuncional'[Regime]), 4), */    ("Situação Funcional", NAMEOF('dimSitFuncional'[GrupoSituacao]), 5),    ("Escolaridade", NAMEOF('dimEscolaridade'[NivelEscolaridade]), 6),    ("Tempo de serviço", NAMEOF('dimTempoServico'[TempoServico]), 7),    ("Jornada de Trabalho", NAMEOF('dimJornada'[DescricaoJornada]), 8),    ("Sexo", NAMEOF('dimSexoIdade'[Sexo]), 9),    ("Faixa Etária", NAMEOF('dimSexoIdade'[FaixaEtaria]), 10)}</code></pre>
+                            <pre class="line-numbers"><code class="language-dax">EVALUATE
+
+(
+
+    {
+
+        ( "Instituição", NAMEOF ( d_IES[Sigla] ), 0 ),
+
+        ( "Cargo Efetivo", NAMEOF ( 'dimCargos'[Cargo] ), 1 ),
+
+        ( "Carreira", NAMEOF ( dimCarreiras[CarreiraDescricao] ), 2 ),
+
+        ( "Regime Juridico", NAMEOF ( 'dimCargos'[RegimeJuridico] ), 3 ),
+
+        ( "Situação Funcional", NAMEOF ( 'dimSitFuncional'[GrupoSituacao] ), 5 ),
+
+        ( "Escolaridade", NAMEOF ( 'dimEscolaridade'[NivelEscolaridade] ), 6 ),
+
+        ( "Tempo de serviço", NAMEOF ( 'dimTempoServico'[TempoServico] ), 7 ),
+
+        ( "Jornada de Trabalho", NAMEOF ( 'dimJornada'[DescricaoJornada] ), 8 ),
+
+        ( "Sexo", NAMEOF ( 'dimSexoIdade'[Sexo] ), 9 ),
+
+        ( "Faixa Etária", NAMEOF ( 'dimSexoIdade'[FaixaEtaria] ), 10 )
+
+    }
+
+)
+
+</code></pre>
                         </div>
                     
                     
@@ -814,7 +1328,61 @@
                      
                     
                         <div class="container">
-                            <pre class="line-numbers"><code class="language-dax">{    ("Sigla", NAMEOF('d_IES'[Sigla]), 0),    ("Descrição da Função", NAMEOF('dimFuncao'[DescricaoFuncao]), 1),    ("Nome do Cargo", NAMEOF('dimFuncao'[Nome do Cargo]), 2),    ("Cargo", NAMEOF('dimFuncao'[FuncaoCompleto]), 3),    ("Tipo de Cargo", NAMEOF('dimFuncao'[CargoFuncao]), 4),    ("Escolaridade", NAMEOF('dimEscolaridade'[NivelEscolaridade]), 5),    ("Tempo de serviço", NAMEOF('dimTempoServico'[TempoServico]), 6),    ("Sexo", NAMEOF('dimSexoIdade'[Sexo]), 7),    ("Faixa Etária", NAMEOF('dimSexoIdade'[FaixaEtaria]), 8),    ("Carreira", NAMEOF(dimCarreiras[CarreiraDescricao]), 9),    ("Cargo Efetivo", NAMEOF('dimCargos'[Cargo]), 10)    }</code></pre>
+                            <pre class="line-numbers"><code class="language-dax">EVALUATE
+
+(
+
+    {
+
+        ( "Sigla", NAMEOF ( 'd_IES'[Sigla] ), 0 ),
+
+        ( "Descrição da Função", NAMEOF ( 'dimFuncao'[DescricaoFuncao] ), 1 ),
+
+        ( "Nome do Cargo", NAMEOF ( 'dimFuncao'[Nome do Cargo] ), 2 ),
+
+        ( "Cargo ou Função", NAMEOF ( 'dimFuncao'[FuncaoCompleto] ), 3 ),
+
+        ( "Tipo de Cargo", NAMEOF ( 'dimFuncao'[CargoFuncao] ), 4 ),
+
+        ( "Escolaridade", NAMEOF ( 'dimEscolaridade'[NivelEscolaridade] ), 5 ),
+
+        ( "Tempo de serviço", NAMEOF ( 'dimTempoServico'[TempoServico] ), 6 ),
+
+        ( "Sexo", NAMEOF ( 'dimSexoIdade'[Sexo] ), 7 ),
+
+        ( "Faixa Etária", NAMEOF ( 'dimSexoIdade'[FaixaEtaria] ), 8 ),
+
+        ( "Carreira", NAMEOF ( dimCarreiras[CarreiraDescricao] ), 9 ),
+
+        ( "Cargo Efetivo", NAMEOF ( 'dimCargos'[Cargo] ), 10 )
+
+    }
+
+)
+
+</code></pre>
+                        </div>
+                    
+                    
+                        <div class="line"></div>
+                     
+                
+                    <h2 id="ID@project"> @project </h2>
+                     
+                     
+                    
+                        <p> Version: 0.1.1 </p>
+                     
+                    
+                        <p> date 20/04/2023 </p>
+                     
+                    
+                        <div class="container">
+                            <pre class="line-numbers"><code class="language-dax">EVALUATE
+
+( SUMMARIZECOLUMNS ( "project", "PNP" ) )
+
+</code></pre>
                         </div>
                     
                      
@@ -834,6 +1402,27 @@
                     
                         <p> Dimensão cursos </p>
                      
+                    
+                        <p> Descrição Automática: A tabela dimCurso possui informações sobre os cursos oferecidos por uma instituição de ensino. As colunas da tabela são:
+
+- codCurso: código identificador único do curso.
+- codUnidade: código identificador único da unidade onde o curso é oferecido.
+- tipoEixoTecnologico: indica o tipo de eixo tecnológico do curso.
+- ModalidadeEnsino: indica a modalidade de ensino do curso.
+- nomeCurso: nome do curso.
+- SubeixoTecnologico: indica o subeixo tecnológico do curso.
+- tipoCurso: indica o tipo de curso (graduação, pós-graduação, técnico, etc.).
+- tipoOferta: indica o tipo de oferta do curso (presencial, a distância, semipresencial, etc.).
+- turnoCurso: indica o turno do curso (matutino, vespertino, noturno, integral, etc.).
+- fatorEsforcoCurso: indica o fator de esforço do curso.
+- CHMinimaCurso: indica a carga horária mínima do curso.
+- skCursoMatricula: código identificador único do curso na tabela de matrículas.
+- CH: indica a carga horária do curso.
+- CHMR: indica a carga horária média por semestre do curso.
+- FECH: indica o fator de esforço médio por semestre do curso.
+- NivelCurso: indica o nível do curso (graduação, mestrado, doutorado, etc.).
+- OrdemNivelCurso: indica a ordem do nível do curso (1 para graduação, 2 para mestrado, 3 para doutorado, etc.). </p>
+                    
                     
                         <p> Authors: dsbr </p>
                      
@@ -934,6 +1523,31 @@
                         <p> Dimensão Unidade </p>
                      
                     
+                        <p> Descrição Automática: A tabela dimUnidade possui informações sobre as unidades de ensino superior no Brasil. As colunas são:
+
+- UF: sigla da unidade federativa onde a unidade está localizada.
+- UO: código da unidade organizacional.
+- codUnidade: código da unidade de ensino superior.
+- codSistec: código da unidade no Sistema Nacional de Informações da Educação Superior (Sistec).
+- Regiao: região geográfica onde a unidade está localizada.
+- Instituicao: nome da instituição de ensino superior.
+- tipoUnidade: tipo de unidade de ensino superior (por exemplo, universidade, faculdade, instituto).
+- codIBGE: código do município onde a unidade está localizada.
+- nomeUnidade: nome da unidade de ensino superior.
+- skUnidade: chave primária da tabela.
+- AnoNomeUnidade: ano em que o nome da unidade foi registrado.
+- nomeUnidadeRecente: nome mais recente da unidade.
+- Latitude: coordenada geográfica da latitude da unidade.
+- Longitude: coordenada geográfica da longitude da unidade.
+- Município: nome do município onde a unidade está localizada.
+- nomeUnidadeRecenteRed: nome mais recente da unidade, reduzido.
+- Instituição | Unidade: nome da instituição seguido do nome da unidade.
+- Instituição (Nome): nome da instituição.
+- Sigla | Instituição: sigla da unidade seguida do nome da instituição. 
+
+Essas informações são importantes para análises e estudos sobre a educação superior no Brasil, como a distribuição geográfica das instituições e a evolução dos nomes das unidades ao longo do tempo. </p>
+                    
+                    
                         <p> Authors: dsbr </p>
                      
                     
@@ -984,7 +1598,7 @@
                                     
                                     <th scope="col"> Instituição (Nome) </th>
                                     
-                                    <th scope="col"> Sigla | Insituição </th>
+                                    <th scope="col"> Sigla | Instituição </th>
                                     
                                     </tr>
                                 </thead>
@@ -1040,6 +1654,27 @@
                     
                         <p> Dimensão Instituições </p>
                      
+                    
+                        <p> Descrição Automática: A tabela d_IES é uma tabela que contém informações sobre as Instituições de Ensino Superior (IES) do Brasil. As colunas da tabela são:
+
+- Instituição (Nome): nome da instituição de ensino superior.
+- UO: Unidade Organizacional da instituição de ensino superior.
+- UF: Unidade Federativa onde a instituição de ensino superior está localizada.
+- Sigla: sigla da instituição de ensino superior.
+- Sede: cidade onde a sede da instituição de ensino superior está localizada.
+- Cód. IBGE: código do Instituto Brasileiro de Geografia e Estatística (IBGE) da cidade onde a instituição de ensino superior está localizada.
+- Região: região geográfica onde a instituição de ensino superior está localizada.
+- Estado: estado onde a instituição de ensino superior está localizada.
+- CO_IES: código de identificação da instituição de ensino superior.
+- Org. Administrativa: tipo de organização administrativa da instituição de ensino superior.
+- Município, UF: nome do município e UF onde a instituição de ensino superior está localizada.
+- Organização Acadêmica: tipo de organização acadêmica da instituição de ensino superior.
+- UrlIESE-MEC: URL do Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (INEP) para a instituição de ensino superior.
+- Organização Acadêmica PNP: tipo de organização acadêmica do Plano Nacional de Pós-Graduação (PNP) da instituição de ensino superior.
+- Organização Acadêmica Sigla PNP: sigla da organização acadêmica do Plano Nacional de Pós-Graduação (PNP) da instituição de ensino superior.
+- OrgAcadPNP: tipo de organização acadêmica do Plano Nacional de Pós-Graduação (PNP) da instituição de ensino superior.
+- SiglaNome: sigla e nome da instituição de ensino superior. </p>
+                    
                     
                         <p> Authors: dsbr </p>
                      
@@ -1140,6 +1775,17 @@
                         <p> Fato vagas </p>
                      
                     
+                        <p> Descrição Automática: A tabela fVagas possui as seguintes colunas:
+
+- codCicloMatricula: é um identificador único para o ciclo de matrícula ao qual a vaga pertence.
+- codVaga: é um identificador único para a vaga.
+- skCicloMatricula: é uma chave de surrogate para o ciclo de matrícula ao qual a vaga pertence.
+- numVagas: é o número de vagas disponíveis para o ciclo de matrícula ao qual a vaga pertence.
+- Ano: é a data e hora em que a vaga foi criada.
+
+Essa tabela armazena informações sobre as vagas disponíveis em um determinado ciclo de matrícula. O número de vagas disponíveis é registrado na coluna numVagas, enquanto as colunas codCicloMatricula e skCicloMatricula identificam o ciclo de matrícula ao qual a vaga pertence. A coluna codVaga é um identificador único para a vaga, e a coluna Ano registra a data e hora em que a vaga foi criada. </p>
+                    
+                    
                         <p> Authors: dsbr </p>
                      
                     
@@ -1190,6 +1836,28 @@
                     
                         <p> Fato situação de matrícula </p>
                      
+                    
+                        <p> Descrição Automática: A tabela fSituaçãoMatrícula possui as seguintes colunas:
+
+- UO: identificador único da unidade organizacional (departamento, faculdade, etc.) onde a matrícula foi realizada.
+- codUnidade: código da unidade onde a matrícula foi realizada.
+- codCicloMatricula: código do ciclo de matrícula (período letivo) em que a matrícula foi realizada.
+- codSexoIdade: código que representa a faixa etária e o gênero do aluno.
+- codRendaRaca: código que representa a renda e a raça do aluno.
+- codFinanciamento: código que representa o tipo de financiamento utilizado pelo aluno.
+- codSituacao: código que representa a situação da matrícula (aprovado, reprovado, trancado, etc.).
+- dataMatricula: data em que a matrícula foi realizada.
+- dataSituacao: data em que a situação da matrícula foi atualizada.
+- numMatriculas: número de matrículas realizadas pelo aluno até o momento.
+- numRegistros: número de registros na tabela para o mesmo aluno e ciclo de matrícula.
+- Ano: ano em que a matrícula foi realizada.
+- skCursoMatricula: identificador único do curso em que a matrícula foi realizada.
+- codCurso: código do curso em que a matrícula foi realizada.
+- skUnidade: identificador único da unidade onde a matrícula foi realizada.
+- skCicloMatricula: identificador único do ciclo de matrícula em que a matrícula foi realizada.
+
+Essa tabela é utilizada para armazenar informações sobre as matrículas realizadas pelos alunos em uma instituição de ensino, permitindo a análise de diversos aspectos relacionados à situação acadêmica dos alunos. As colunas representam informações como a unidade onde a matrícula foi realizada, o curso em que o aluno está matriculado, a situação da matrícula e a data em que a matrícula foi realizada ou atualizada. </p>
+                    
                     
                         <p> Authors: dsbr </p>
                      
@@ -1286,6 +1954,19 @@
                         <p> Dimensão sexo e idade (valores fechados PNP) </p>
                      
                     
+                        <p> Descrição Automática: A tabela dimSexoIdade tem como objetivo armazenar informações sobre faixa etária e sexo, com as seguintes colunas:
+
+- codSexoIdade: identificador único para cada registro na tabela.
+- FaixaEtaria: faixa etária representada por uma string.
+- Sexo: sexo representado por uma string.
+- ordemFaixaEtaria: ordem numérica da faixa etária, utilizada para ordenação.
+- ordemSexo: ordem numérica do sexo, utilizada para ordenação.
+- FaixaEtariaDeclarada: faixa etária declarada pelo usuário.
+- SexoDeclarada: sexo declarado pelo usuário.
+
+Essa tabela é útil para análises que envolvam a relação entre faixa etária e sexo, permitindo a criação de gráficos e relatórios que ajudem a entender melhor o perfil dos usuários ou clientes de uma empresa. As colunas ordemFaixaEtaria e ordemSexo são importantes para garantir que a ordenação dos dados seja feita corretamente, independentemente da ordem alfabética das strings. </p>
+                    
+                    
                         <p> Authors: dsbr </p>
                      
                     
@@ -1344,6 +2025,19 @@
                     
                         <p> Dimensão ciclo de matrículas </p>
                      
+                    
+                        <p> Descrição Automática: A tabela dimCicloMatricula possui as seguintes colunas:
+
+- codCicloMatricula: é um identificador único para cada ciclo de matrícula registrado na tabela.
+- dataInicioCiclo: é a data de início do ciclo de matrícula.
+- dataFimCiclo: é a data de término do ciclo de matrícula.
+- skCicloMatricula: é uma chave de substituição para o codCicloMatricula, utilizada para facilitar a integração com outras tabelas.
+- anoInicioCiclo: é o ano em que o ciclo de matrícula teve início.
+- Inscritos: é o número de alunos inscritos no ciclo de matrícula.
+- anoFimCiclo: é o ano em que o ciclo de matrícula terminou.
+
+Essa tabela é utilizada para armazenar informações sobre os ciclos de matrícula de uma instituição de ensino, permitindo a análise de dados relacionados à quantidade de alunos inscritos em cada ciclo, bem como a duração de cada ciclo. As informações contidas nessa tabela podem ser utilizadas para a tomada de decisões relacionadas à gestão acadêmica e financeira da instituição. </p>
+                    
                     
                         <p> Authors: dsbr </p>
                      
@@ -1404,6 +2098,17 @@
                         <p> Dimensão financiamento </p>
                      
                     
+                        <p> Descrição Automática: A tabela dimFinanciamento possui quatro colunas:
+
+1. codFinanciamento (string): representa o código do financiamento, que é uma identificação única para cada financiamento.
+
+2. nomeFonteFinanciamento (string): representa o nome da fonte de financiamento, ou seja, a instituição ou entidade que forneceu o financiamento.
+
+3. nomeFonteFinanciamentoCorrigido (string): representa o nome da fonte de financiamento corrigido, ou seja, o nome da instituição ou entidade após ter passado por algum processo de correção ou padronização.
+
+4. ordemFinanciamento (int64): representa a ordem do financiamento, ou seja, a posição do financiamento em relação aos demais financiamentos. Essa coluna é útil para ordenar os financiamentos de acordo com a sua importância ou relevância. </p>
+                    
+                    
                         <p> Authors: dsbr </p>
                      
                     
@@ -1450,6 +2155,19 @@
                     
                         <p> Dimensão Renda e Idade </p>
                      
+                    
+                        <p> Descrição Automática: A tabela dimRendaRaca possui as seguintes colunas:
+
+- codRendaRaca: é um identificador único para cada registro na tabela.
+- CorRaca: é uma string que representa a cor/raça declarada pelo indivíduo.
+- RendaFamiliar: é uma string que representa a faixa de renda familiar do indivíduo.
+- RendaFamiliarDeclarada: é uma string que representa a renda familiar declarada pelo indivíduo.
+- CorRacaDeclarada: é uma string que representa a cor/raça declarada pelo indivíduo.
+- ordemRendaFamiliar: é um número inteiro que representa a ordem da faixa de renda familiar na qual o indivíduo se encontra.
+- ordemCorRaca: é uma string que representa a ordem da cor/raça declarada pelo indivíduo.
+
+Essa tabela é utilizada para armazenar informações sobre a renda e a cor/raça declarada pelos indivíduos. As colunas "RendaFamiliar" e "ordemRendaFamiliar" são utilizadas para categorizar a renda familiar em faixas e ordená-las de acordo com a sua importância. Já as colunas "CorRaca" e "ordemCorRaca" são utilizadas para categorizar a cor/raça declarada pelos indivíduos e ordená-las de acordo com a sua importância. As colunas "RendaFamiliarDeclarada" e "CorRacaDeclarada" são utilizadas para armazenar as informações declaradas pelos indivíduos, enquanto as colunas "codRendaRaca" são utilizadas para identificar cada registro de forma única. </p>
+                    
                     
                         <p> Authors: dsbr </p>
                      
@@ -1510,6 +2228,18 @@
                         <p> Dimensão situação de matricula </p>
                      
                     
+                        <p> Descrição Automática: A tabela dimSituacao possui as seguintes colunas:
+
+- codSituacao: é uma string que representa o código da situação.
+- categoriaSituacao: é uma string que representa a categoria da situação.
+- nomeSituacao: é uma string que representa o nome da situação.
+- FluxoRetido: é uma string que indica se a situação retém o fluxo ou não.
+- ordemcategoriaSituacao: é um número inteiro que representa a ordem da categoria da situação.
+- ordemnomeSituacao: é um número inteiro que representa a ordem do nome da situação.
+
+Essas colunas são utilizadas para armazenar informações sobre as situações que podem ocorrer em um determinado processo ou fluxo de trabalho. O código da situação é uma identificação única para cada situação, enquanto a categoria e o nome da situação fornecem informações adicionais sobre o tipo de situação. A coluna FluxoRetido indica se a situação retém o fluxo ou não, o que pode ser útil para determinar o impacto que a situação tem no processo. As colunas ordemcategoriaSituacao e ordemnomeSituacao são utilizadas para ordenar as situações de acordo com a categoria e o nome, respectivamente. </p>
+                    
+                    
                         <p> Authors: dsbr </p>
                      
                     
@@ -1564,6 +2294,21 @@
                     
                         <p> Dimensão tipo de oferta de vagas </p>
                      
+                    
+                        <p> Descrição Automática: A tabela dimVagas possui as seguintes colunas:
+
+- nomeVaga: é uma string que representa o nome da vaga.
+- tipoVaga: é uma string que representa o tipo da vaga, como "carro", "moto", "bicicleta", etc.
+- categoriaVaga: é uma string que representa a categoria da vaga, como "coberta", "descoberta", "vip", etc.
+- codVaga: é uma string que representa o código da vaga.
+- tipoReservaVaga: é uma string que representa o tipo de reserva da vaga, como "pré-pago", "pós-pago", "mensalista", etc.
+- nomeVagaAlternativo: é uma string que representa um nome alternativo para a vaga.
+- ordemtipoReserva: é um número inteiro que representa a ordem de prioridade do tipo de reserva da vaga.
+- ordemtipoVaga: é um número inteiro que representa a ordem de prioridade do tipo da vaga.
+- ordemCategoria: é uma string que representa a ordem de prioridade da categoria da vaga.
+
+Essas colunas são utilizadas para identificar e classificar as vagas de um estacionamento, permitindo que sejam organizadas e gerenciadas de forma eficiente. As informações contidas na tabela podem ser utilizadas para criar relatórios, estatísticas e outras análises que ajudem a otimizar o uso do estacionamento. </p>
+                    
                     
                         <p> Authors: dsbr </p>
                      
@@ -1631,6 +2376,23 @@
                     
                         <p> Dimensão datas </p>
                      
+                    
+                        <p> Descrição Automática: A tabela dCalendário possui informações sobre datas e seus respectivos atributos. As colunas são:
+
+- Data: representa a data em formato dateTime.
+- Ano: representa o ano da data em formato int64.
+- Trimestre: representa o trimestre da data em formato string.
+- Número Semana: representa o número da semana do ano em formato int64.
+- Número Mês: representa o número do mês em formato int64.
+- DateInt: representa a data em formato inteiro.
+- Mês: representa o mês da data em formato string.
+- Dia da Semana: representa o dia da semana da data em formato string.
+- Mês Ano: representa o mês e ano da data em formato string.
+- Ano Base: representa o ano base da data em formato string.
+- Ano_Publicacao: representa o ano de publicação em formato double.
+
+Essas informações podem ser úteis para análises e cálculos que envolvam datas, como por exemplo, identificar o trimestre ou o mês de uma determinada data, calcular a diferença entre duas datas, entre outros. </p>
+                    
                     
                         <p> Authors: dsbr </p>
                      
@@ -1707,6 +2469,15 @@
                         <p> Dimensão Esfera orçamentária </p>
                      
                     
+                        <p> Descrição Automática: A tabela de nome "Esfera" possui duas colunas:
+
+1. "CodEsfera" - é uma coluna do tipo string que representa o código da esfera. Cada esfera possui um código único que a identifica.
+
+2. "Esfera" - é uma coluna do tipo string que representa o nome da esfera. Cada esfera possui um nome que a identifica.
+
+Essa tabela é utilizada para armazenar informações sobre as esferas de atuação de uma organização ou empresa. As esferas podem ser, por exemplo, financeira, administrativa, operacional, entre outras. O código da esfera é utilizado para identificar de forma única cada uma delas, enquanto o nome da esfera é utilizado para facilitar a compreensão e a comunicação entre os membros da organização. </p>
+                    
+                    
                         <p> Authors: dsbr </p>
                      
                     
@@ -1745,6 +2516,19 @@
                     
                         <p> Dimensão Classificação de resultado primário do orçamento </p>
                      
+                    
+                        <p> Descrição Automática: A tabela ResultadoPrimario possui quatro colunas:
+
+1. CodResultadoPrimario (string): é o código identificador único para cada resultado primário registrado na tabela.
+
+2. ResultadoPrimario (string): é o nome do resultado primário registrado na tabela.
+
+3. Resultado Primário (Cidadã) (string): é uma descrição mais detalhada do resultado primário, possivelmente incluindo informações adicionais sobre o que ele representa.
+
+4. Cód_ResultadoPrimario (string): é um código identificador alternativo para cada resultado primário registrado na tabela.
+
+Essa tabela é usada para armazenar informações sobre os resultados primários, que são indicadores de desempenho usados para medir o sucesso de uma organização ou projeto. Cada resultado primário é identificado por um código exclusivo e pode ter uma descrição mais detalhada. O código alternativo é fornecido para facilitar a referência cruzada com outras tabelas ou sistemas. </p>
+                    
                     
                         <p> Authors: dsbr </p>
                      
@@ -1792,6 +2576,21 @@
                     
                         <p> Dimensão Fonte orçamentária </p>
                      
+                    
+                        <p> Descrição Automática: A tabela de nome Fonte possui as seguintes colunas:
+
+- CodFonteDetalhado: código da fonte detalhada;
+- FonteDetalhado: descrição da fonte detalhada;
+- UOFonte: unidade orçamentária da fonte;
+- CodFonte: código da fonte;
+- CodIdentificadorUso: código do identificador de uso da fonte;
+- IdentificadorUso: descrição do identificador de uso da fonte;
+- CodFonteRecursos: código da fonte de recursos;
+- FonteRecursos: descrição da fonte de recursos;
+- Cód_Fonte: código da fonte.
+
+Essa tabela é utilizada para armazenar informações sobre as fontes de recursos utilizadas em um determinado orçamento. As fontes de recursos são as origens de onde o dinheiro é proveniente para financiar as despesas públicas. As colunas da tabela representam informações como o código e descrição da fonte, a unidade orçamentária responsável por ela, o identificador de uso e a fonte de recursos utilizada. Essas informações são importantes para o controle e gestão do orçamento público. </p>
+                    
                     
                         <p> Authors: dsbr </p>
                      
@@ -1859,6 +2658,49 @@
                     
                         <p> Fato execução orçamento </p>
                      
+                    
+                        <p> Descrição Automática: A tabela ItemDespesa possui as seguintes colunas:
+
+- DiaEmissao: data e hora em que a despesa foi emitida;
+- CodEsfera: código que identifica a esfera governamental responsável pela despesa;
+- CodResultadoPrimario: código que identifica o resultado primário ao qual a despesa está relacionada;
+- PTRES: código que identifica o programa de trabalho ao qual a despesa está relacionada;
+- CodFonteDetalhado: código que identifica a fonte de recursos utilizada para a despesa;
+- CodNDD: código que identifica a natureza da despesa;
+- CodUGExecutora: código que identifica a unidade gestora responsável pela execução da despesa;
+- ProjetoLei: valor decimal que representa o valor previsto para a despesa em um projeto de lei;
+- DotacaoInicial: valor decimal que representa a dotação inicial prevista para a despesa;
+- DotacaoSuplementar: valor decimal que representa a dotação suplementar prevista para a despesa;
+- DotacaoEspecial: valor decimal que representa a dotação especial prevista para a despesa;
+- DotacaoExtraordinaria: valor decimal que representa a dotação extraordinária prevista para a despesa;
+- DotacaoAtualizada: valor decimal que representa a dotação atualizada prevista para a despesa;
+- DotacaoCancRem: valor decimal que representa a dotação cancelada ou remanejada prevista para a despesa;
+- ProvisaoRecebida: valor decimal que representa a provisão recebida para a despesa;
+- ProvisaoConcedida: valor decimal que representa a provisão concedida para a despesa;
+- DestaqueRecebido: valor decimal que representa o destaque recebido para a despesa;
+- DestaqueConcedido: valor decimal que representa o destaque concedido para a despesa;
+- CreditoDisponivel: valor decimal que representa o crédito disponível para a despesa;
+- CreditoIndisponivel: valor decimal que representa o crédito indisponível para a despesa;
+- Empenhado: valor decimal que representa o valor empenhado para a despesa;
+- EmpenhadoaLiquidar: valor decimal que representa o valor empenhado a liquidar para a despesa;
+- Liquidado: valor decimal que representa o valor liquidado para a despesa;
+- Pago: valor decimal que representa o valor pago para a despesa;
+- RAPProcInscrito: valor decimal que representa o valor inscrito em Restos a Pagar Processados (RAP) para a despesa;
+- RAPProcReinscrito: valor decimal que representa o valor reinscrito em RAP para a despesa;
+- RAPProcCancelado: valor decimal que representa o valor cancelado em RAP para a despesa;
+- RAPProcPago: valor decimal que representa o valor pago em RAP para a despesa;
+- RAPProcaPagar: valor decimal que representa o valor a pagar em RAP para a despesa;
+- RAPNProcInscrito: valor decimal que representa o valor inscrito em Restos a Pagar Não Processados (RAP) para a despesa;
+- RAPNProcReinscrito: valor decimal que representa o valor reinscrito em RAP para a despesa;
+- RAPNProcCancelado: valor decimal que representa o valor cancelado em RAP para a despesa;
+- RAPNProcaLiquidar: valor decimal que representa o valor a liquidar em RAP para a despesa;
+- RAPNProcLiquidado: valor decimal que representa o valor liquidado em RAP para a despesa;
+- RAPNProcLiquidaPagar: valor decimal que representa o valor a pagar em RAP para a despesa;
+- RAPNProcPago: valor decimal que representa o valor pago em RAP para a despesa;
+- RAPNProcaPagar: valor decimal que representa o valor a pagar em RAP para a despesa;
+- RAPNProcBloqueado: valor decimal que representa o valor bloqueado em RAP para a despesa;
+- TED: código que identifica a Transferência Eletrônica Disponível (TED) utilizada para o pagamento da despesa. </p>
+                    
                     
                         <p> Authors: dsbr </p>
                      
@@ -2047,6 +2889,28 @@
                         <p> Dimensão Natureza de despesa </p>
                      
                     
+                        <p> Descrição Automática: A tabela NaturezaDespesa possui as seguintes colunas:
+
+- CodNaturezaDespesa: código identificador da natureza da despesa;
+- NDD: nome da natureza da despesa;
+- CodND: código da natureza da despesa;
+- CodCategoriaEconomica: código da categoria econômica da despesa;
+- CategoriaEconomica: nome da categoria econômica da despesa;
+- CodGrupoNatDespesa: código do grupo da natureza da despesa;
+- GrupoNatDespesa: nome do grupo da natureza da despesa;
+- CodModalidadeAplicacao: código da modalidade de aplicação da despesa;
+- ModalidadeAplicacao: nome da modalidade de aplicação da despesa;
+- CodElementoDespesa: código do elemento da despesa;
+- ElementoDespesa: nome do elemento da despesa;
+- ItemDespesa: item da despesa;
+- Mão de obra Terceirizada(Sim=1): indica se a despesa é referente a mão de obra terceirizada (1 = sim, 0 = não);
+- Cód_NaturezaDespesaDetalhada: código da natureza da despesa detalhada;
+- Cód_ElementoDespesa: código do elemento da despesa;
+- Cód_GrupoNatDespesa: código do grupo da natureza da despesa.
+
+Essa tabela é utilizada para classificar as despesas realizadas por um órgão ou entidade pública, permitindo uma melhor gestão e controle dos gastos públicos. As informações contidas nas colunas permitem identificar a natureza, categoria, grupo, modalidade e elemento da despesa, bem como se ela é referente a mão de obra terceirizada. </p>
+                    
+                    
                         <p> Authors: dsbr </p>
                      
                     
@@ -2141,6 +3005,33 @@
                     
                         <p> Dimensão PTRES </p>
                      
+                    
+                        <p> Descrição Automática: A tabela PTRES é uma tabela que provavelmente contém informações sobre o orçamento público. As colunas da tabela são:
+
+- PTRES: código identificador da PTRES (Programação de Trabalho e Orçamento da União)
+- Funcional: código identificador da função do orçamento
+- ProgramaticaUO: código identificador da unidade orçamentária responsável pela execução do programa
+- CodFuncao: código identificador da função do orçamento
+- Funcao: descrição da função do orçamento
+- CodSubfuncao: código identificador da subfunção do orçamento
+- Subfuncao: descrição da subfunção do orçamento
+- CodUnidadeOrcamentaria: código identificador da unidade orçamentária responsável pela execução do programa
+- CodPrograma: código identificador do programa
+- Programa: descrição do programa
+- CodAcao: código identificador da ação do programa
+- Acao: descrição da ação do programa
+- CodSubtitulo: código identificador do subtítulo do orçamento
+- Subtitulo: descrição do subtítulo do orçamento
+- CodPlanoOrcamentario: código identificador do plano orçamentário
+- PlanoOrcamentario: descrição do plano orçamentário
+- Cód_Ação: código identificador da ação do programa
+- Cód_PlanoOrçamentário: código identificador do plano orçamentário
+- Cód_Programa: código identificador do programa
+- Cód_Função: código identificador da função do orçamento
+- Cód_SubFunção: código identificador da subfunção do orçamento
+
+Essas colunas representam informações importantes sobre a alocação de recursos públicos em diferentes áreas e programas governamentais. </p>
+                    
                     
                         <p> Authors: dsbr </p>
                      
@@ -2257,6 +3148,19 @@
                         <p> Dimensão Vínculo entre unidades e órgãos </p>
                      
                     
+                        <p> Descrição Automática: A tabela UnidadeOrgao possui as seguintes colunas:
+
+- UnidadeOrcamentaria: identificador único da unidade orçamentária.
+- NomeUnidadeOrcamentaria: nome da unidade orçamentária.
+- Orgao: identificador único do órgão ao qual a unidade orçamentária está vinculada.
+- NomeOrgao: nome do órgão ao qual a unidade orçamentária está vinculada.
+- CodUOResponsavel: código da unidade orçamentária responsável pela execução do orçamento.
+- Cód_Órgão: código do órgão ao qual a unidade orçamentária está vinculada.
+- Cód_UO: código da unidade orçamentária.
+
+Essa tabela é utilizada para armazenar informações sobre as unidades orçamentárias e os órgãos aos quais elas estão vinculadas. As unidades orçamentárias são responsáveis pela execução do orçamento e estão vinculadas a um órgão específico. O código da unidade orçamentária é utilizado para identificar de forma única cada unidade, enquanto o código do órgão é utilizado para identificar o órgão ao qual a unidade está vinculada. O código da unidade orçamentária responsável pela execução do orçamento também é armazenado nessa tabela. </p>
+                    
+                    
                         <p> Authors: dsbr </p>
                      
                     
@@ -2316,6 +3220,17 @@
                         <p> Dimensão Unidade Gestora executora </p>
                      
                     
+                        <p> Descrição Automática: A tabela UGE é uma tabela que armazena informações sobre as Unidades Gestoras Executoras (UGE) de um determinado órgão ou entidade. As colunas presentes na tabela são:
+
+- CodUGExecutora: é o código da UGE executora, que é um identificador único para cada unidade gestora executora.
+- UGExecutora: é o nome da UGE executora, que é o nome da unidade gestora executora.
+- CodOrgaoUGE: é o código do órgão ao qual a UGE executora está vinculada.
+- CodOrgaoUGEGestao: é o código do órgão responsável pela gestão da UGE executora.
+- OrgaoUGEGestao: é o nome do órgão responsável pela gestão da UGE executora.
+
+Essas informações são importantes para a gestão e controle das unidades gestoras executoras, permitindo que sejam identificadas e monitoradas as atividades realizadas por cada uma delas. </p>
+                    
+                    
                         <p> Authors: dsbr </p>
                      
                     
@@ -2367,6 +3282,17 @@
                         <p> Lista de brasões </p>
                      
                     
+                        <p> Descrição Automática: A tabela "Brasao" possui quatro colunas com os seguintes nomes e tipos de dados:
+
+1. "UO" (string): Esta coluna armazena o código da unidade organizacional (UO) que está associada ao brasão. A UO é uma estrutura hierárquica utilizada para organizar as unidades administrativas de uma instituição.
+
+2. "URL_Brasao" (string): Esta coluna armazena a URL (Uniform Resource Locator) do arquivo de imagem que contém o brasão da UO.
+
+3. "URL_Fundo" (string): Esta coluna armazena a URL do arquivo de imagem que contém o fundo utilizado para exibir o brasão da UO.
+
+4. "Base64_Brasao" (string): Esta coluna armazena o brasão da UO em formato Base64, que é uma representação textual de dados binários. Essa representação é utilizada para armazenar imagens em bancos de dados e em outras aplicações que requerem a manipulação de dados binários em formato de texto. </p>
+                    
+                    
                         <p> Authors: dsbr </p>
                      
                     
@@ -2414,6 +3340,17 @@
                         <p> Lista a data de atualização de cada base </p>
                      
                     
+                        <p> Descrição Automática: A tabela de nome "Atualizacao" possui três colunas: "Atualizacao", "Atualizacao_DH" e "Atualizacao_TG", todas do tipo "dateTime". 
+
+A coluna "Atualizacao" provavelmente armazena a data e hora da última atualização de algum registro ou informação no sistema. 
+
+Já a coluna "Atualizacao_DH" pode representar a data e hora da última atualização de algum dado relacionado a um dispositivo de hardware, como por exemplo, a última vez que um sensor foi atualizado. 
+
+Por fim, a coluna "Atualizacao_TG" pode representar a data e hora da última atualização de algum dado relacionado a um jogo ou aplicativo, como por exemplo, a última vez que um jogador atualizou seu perfil ou pontuação. 
+
+Em resumo, as três colunas da tabela "Atualizacao" armazenam informações sobre a data e hora da última atualização de diferentes tipos de dados no sistema. </p>
+                    
+                    
                         <p> Authors: dsbr </p>
                      
                     
@@ -2457,6 +3394,15 @@
                         <p> Tabela de medidas de totalização de variáveis do orçamento </p>
                      
                     
+                        <p> Descrição Automática: A tabela FuncFinanceiras possui duas colunas:
+
+1. Funcoes (string): Esta coluna armazena o nome das funções financeiras que podem ser utilizadas em cálculos financeiros. Por exemplo, "VP" (Valor Presente), "VF" (Valor Futuro), "PMT" (Pagamento), entre outras.
+
+2. Ordinal (int64): Esta coluna armazena um número inteiro que representa a ordem em que as funções financeiras devem ser executadas em um cálculo financeiro. Por exemplo, se a função "VP" deve ser executada antes da função "PMT", então a coluna "Ordinal" terá o valor 1 para a função "VP" e o valor 2 para a função "PMT".
+
+Essa tabela é útil para organizar as funções financeiras em uma ordem lógica e garantir que os cálculos sejam executados corretamente. </p>
+                    
+                    
                         <p> Authors: dsbr </p>
                      
                     
@@ -2495,6 +3441,15 @@
                     
                         <p> Tabela de indicadores financeiros </p>
                      
+                    
+                        <p> Descrição Automática: A tabela de nome MedidasFinanceiras possui duas colunas: "Medidas" e "Ordinal". 
+
+A coluna "Medidas" é do tipo string e armazena o nome das medidas financeiras, como por exemplo "Receita", "Lucro", "Despesas", entre outras. 
+
+Já a coluna "Ordinal" é do tipo int64 e armazena um número que representa a ordem em que as medidas financeiras devem ser apresentadas em um relatório financeiro. Por exemplo, se a medida "Receita" tem o valor 1 na coluna "Ordinal" e a medida "Despesas" tem o valor 2, isso significa que a medida "Receita" deve ser apresentada antes da medida "Despesas" no relatório financeiro. 
+
+Em resumo, a tabela MedidasFinanceiras é utilizada para armazenar informações sobre as medidas financeiras e sua ordem de apresentação em um relatório financeiro. </p>
+                    
                     
                         <p> Authors: dsbr </p>
                      
@@ -2535,6 +3490,13 @@
                         <p> Dimensão datas relativas para visual </p>
                      
                     
+                        <p> Descrição Automática: A tabela dCalendInterval possui duas colunas:
+
+1. Name (Nome): Esta coluna armazena o nome do intervalo de calendário. Por exemplo, pode ser "Dia", "Semana", "Mês", "Trimestre", "Ano", etc. O nome é uma string.
+
+2. Ordinal: Esta coluna armazena um número inteiro que representa a posição do intervalo na hierarquia de intervalos de calendário. Por exemplo, o intervalo "Dia" pode ter um ordinal de 1, enquanto o intervalo "Mês" pode ter um ordinal de 3. Isso é útil para ordenar os intervalos de calendário em uma lista ou em uma visualização gráfica. </p>
+                    
+                    
                         <p> Authors: dsbr </p>
                      
                     
@@ -2573,6 +3535,23 @@
                     
                         <p> Fato Eficiência Acadêmica </p>
                      
+                    
+                        <p> Descrição Automática: A tabela fEficienciaAcademica possui as seguintes colunas:
+
+- Ano: data e hora em que a informação foi registrada.
+- UO: identificador único da unidade organizacional.
+- skCursoMatricula: identificador único do curso de matrícula.
+- codCurso: código do curso.
+- skUnidade: identificador único da unidade.
+- codUnidade: código da unidade.
+- codSexoIdade: código do sexo e idade do aluno.
+- codRendaRaca: código da renda e raça do aluno.
+- codFinanciamento: código do financiamento do aluno.
+- codSituacao: código da situação do aluno.
+- numMatriculas: número de matrículas do aluno.
+
+Essa tabela é utilizada para armazenar informações sobre a eficiência acadêmica dos alunos, incluindo dados sobre sua matrícula, curso, unidade organizacional, sexo, idade, renda, raça, financiamento e situação. O número de matrículas é registrado para cada aluno, permitindo a análise da eficiência acadêmica ao longo do tempo. </p>
+                    
                     
                         <p> Authors: dsbr </p>
                      
@@ -2649,6 +3628,17 @@
                         <p> Dimensão Tipo de curso </p>
                      
                     
+                        <p> Descrição Automática: A tabela TipoCurso possui três colunas:
+
+1. "Tipo Curso" (string): Esta coluna armazena o nome do tipo de curso, como "Graduação", "Pós-Graduação", "Mestrado", "Doutorado", entre outros. 
+
+2. "Nível Curso" (string): Esta coluna armazena o nível do curso, como "Bacharelado", "Especialização", "Mestrado Profissional", "Doutorado", entre outros. 
+
+3. "Ordem Nível" (string): Esta coluna armazena a ordem hierárquica do nível do curso, como "1" para cursos de graduação, "2" para cursos de pós-graduação, "3" para mestrado e "4" para doutorado.
+
+Essa tabela é útil para organizar e classificar os diferentes tipos e níveis de cursos oferecidos por uma instituição de ensino, permitindo uma melhor gestão e planejamento acadêmico. </p>
+                    
+                    
                         <p> Authors: dsbr </p>
                      
                     
@@ -2691,6 +3681,18 @@
                     
                         <p> Fato Financeiro </p>
                      
+                    
+                        <p> Descrição Automática: A tabela fFinanceiro possui as seguintes colunas:
+
+- Ano: representa o ano em que a ação financeira ocorreu, com o tipo de dado dateTime, que é um formato de data e hora.
+- UO: representa a Unidade Organizacional envolvida na ação financeira, com o tipo de dado int64, que é um número inteiro de 64 bits.
+- Acao: representa a ação financeira realizada, com o tipo de dado string, que é uma sequência de caracteres.
+- NDD: representa o Nível de Detalhamento da Despesa envolvido na ação financeira, com o tipo de dado int64, que é um número inteiro de 64 bits.
+- GND: representa o Grupo de Natureza da Despesa envolvido na ação financeira, com o tipo de dado string, que é uma sequência de caracteres.
+- LiquidacoesTotais: representa o valor total das liquidações realizadas na ação financeira, com o tipo de dado double, que é um número decimal de 64 bits.
+
+Essas colunas são utilizadas para armazenar informações sobre ações financeiras realizadas em uma determinada unidade organizacional, em um determinado ano, com detalhamento sobre a natureza e o valor das despesas envolvidas. </p>
+                    
                     
                         <p> Authors: dsbr </p>
                      
@@ -2746,6 +3748,29 @@
                     
                         <p> Fato Servidores (Microdados) </p>
                      
+                    
+                        <p> Descrição Automática: A tabela fServidores | Microdados possui as seguintes colunas:
+
+- Ano: indica o ano em que os dados foram coletados.
+- UO: identifica a unidade organizacional a que o servidor está vinculado.
+- skUnidade: chave primária da unidade organizacional.
+- codUnidade_new: código da unidade organizacional.
+- Jornada_de_Trabalho: indica a carga horária de trabalho do servidor.
+- Número_de_registros: indica o número de registros de servidores na unidade organizacional.
+- Rsc: indica o regime de trabalho do servidor.
+- Titulação: indica a titulação do servidor.
+- Validação_SETEC: indica se a validação do servidor foi realizada pela SETEC.
+- Vinculo_Carreira: indica o vínculo do servidor com a carreira.
+- Vinculo_Classe: indica o vínculo do servidor com a classe.
+- Vinculo_Contrato: indica o tipo de contrato do servidor.
+- Vinculo_Professor: indica se o servidor é professor.
+- fatorTitulacao: indica o fator de titulação do servidor.
+- fatorProfEquivalente: indica o fator de equivalência do professor.
+- Data: indica a data em que os dados foram coletados.
+- tipoProfTecnico: indica o tipo de professor ou técnico.
+
+Essas informações são importantes para análises e estudos sobre a distribuição e características dos servidores em uma determinada unidade organizacional. </p>
+                    
                     
                         <p> Authors: dsbr </p>
                      
@@ -2846,6 +3871,23 @@
                         <p> Fato postagens do instagram </p>
                      
                     
+                        <p> Descrição Automática: A tabela fInstagram possui as seguintes colunas:
+
+- comments_count: representa o número de comentários que foram feitos na publicação do Instagram.
+- like_count: representa o número de curtidas que foram dadas na publicação do Instagram.
+- caption: representa a legenda que foi adicionada à publicação do Instagram.
+- media_type: representa o tipo de mídia que foi postada na publicação do Instagram, como foto, vídeo, carrossel, etc.
+- URLpermalink: representa o link permanente da publicação do Instagram.
+- timestamp: representa a data e hora em que a publicação do Instagram foi feita.
+- username: representa o nome de usuário do autor da publicação do Instagram.
+- id: representa o identificador único da publicação do Instagram.
+- media_url: representa a URL da mídia que foi postada na publicação do Instagram.
+- Comentários: representa uma coluna adicional que pode ser usada para armazenar informações adicionais sobre os comentários feitos na publicação do Instagram.
+- Curtidas: representa uma coluna adicional que pode ser usada para armazenar informações adicionais sobre as curtidas dadas na publicação do Instagram.
+
+Essas colunas são úteis para análise de dados do Instagram, permitindo que os usuários obtenham informações sobre o engajamento de suas publicações, bem como sobre o comportamento de seus seguidores. </p>
+                    
+                    
                         <p> Authors: dsbr </p>
                      
                     
@@ -2920,6 +3962,23 @@
                     
                         <p> Dimensão nome de usuário do instagram </p>
                      
+                    
+                        <p> Descrição Automática: A tabela dimUsernameInstagram é uma tabela de dimensão que contém informações sobre usuários do Instagram. As colunas da tabela são as seguintes:
+
+- username: nome de usuário do Instagram.
+- website: URL do site pessoal ou profissional do usuário.
+- name: nome completo do usuário.
+- ig_id: ID do usuário no Instagram.
+- id: ID único do usuário na base de dados.
+- profile_picture_url: URL da foto de perfil do usuário.
+- biography: descrição do perfil do usuário.
+- follows_count: número de contas que o usuário segue.
+- followers_count: número de seguidores do usuário.
+- media_count: número de publicações do usuário.
+- UO: campo opcional para armazenar informações adicionais sobre o usuário.
+
+Essas informações podem ser usadas para análises e segmentações de usuários do Instagram em um ambiente de data warehouse. </p>
+                    
                     
                         <p> Authors: dsbr </p>
                      
@@ -2996,6 +4055,11 @@
                         <p> Tabela de identificação de cor por região </p>
                      
                     
+                        <p> Descrição Automática: A tabela _UFColor possui duas colunas: "Região" e "Cor". A coluna "Região" é do tipo string e representa as cinco regiões do Brasil (Norte, Nordeste, Centro-Oeste, Sudeste e Sul). Já a coluna "Cor" também é do tipo string e representa uma cor associada a cada região.
+
+Essa tabela pode ser utilizada para representar visualmente as regiões do Brasil em um mapa, por exemplo. Cada região seria representada por uma cor específica, facilitando a identificação e compreensão das informações apresentadas. </p>
+                    
+                    
                         <p> Authors: dsbr </p>
                      
                     
@@ -3034,6 +4098,17 @@
                     
                         <p> Ícones de redes social </p>
                      
+                    
+                        <p> Descrição Automática: A tabela "icons" possui três colunas:
+
+1. "Rede Social" (string): Esta coluna armazena o nome da rede social associada ao ícone. Por exemplo, "Facebook", "Twitter", "Instagram", etc.
+
+2. "base64" (string): Esta coluna armazena a imagem do ícone em formato base64. Isso significa que a imagem é codificada em uma sequência de caracteres alfanuméricos que podem ser facilmente armazenados em um banco de dados ou transmitidos pela internet.
+
+3. "Ordem" (string): Esta coluna armazena a ordem em que os ícones devem ser exibidos na interface do usuário. Por exemplo, se a ordem for "1", o ícone será exibido primeiro na lista de ícones. Se a ordem for "2", o ícone será exibido em segundo lugar, e assim por diante.
+
+Essa tabela é útil para armazenar e gerenciar os ícones de redes sociais em um aplicativo ou site, permitindo que os desenvolvedores controlem facilmente a exibição e a ordem dos ícones. </p>
+                    
                     
                         <p> Authors: dsbr </p>
                      
@@ -3077,6 +4152,23 @@
                     
                         <p> Dimensão Redes sociais </p>
                      
+                    
+                        <p> Descrição Automática: A tabela de nome "Redes Sociais" possui as seguintes colunas:
+
+- Sigla (string): representa a sigla da rede social, por exemplo, "FB" para Facebook, "TW" para Twitter, "IG" para Instagram, entre outras.
+
+- CO_IES (int64): é o código da Instituição de Ensino Superior (IES) que utiliza a rede social. Cada IES possui um código único.
+
+- Atributo (string): é o nome do perfil ou página da IES na rede social.
+
+- URL (string): é o endereço eletrônico (link) do perfil ou página da IES na rede social.
+
+- Ícone (string): é o nome do arquivo de imagem que representa o ícone da rede social.
+
+- Ordem (string): é a ordem em que as redes sociais devem ser exibidas na página da IES.
+
+Essa tabela é utilizada para armazenar informações sobre as redes sociais utilizadas pelas Instituições de Ensino Superior, permitindo que essas informações sejam facilmente acessadas e exibidas em seus sites institucionais. </p>
+                    
                     
                         <p> Authors: dsbr </p>
                      
@@ -3132,6 +4224,27 @@
                     
                         <p> Tabela para navegação e títulos </p>
                      
+                    
+                        <p> Descrição Automática: A tabela _ExpTítulos possui as seguintes colunas:
+
+1. Página PNP_Publicada.PBIX (string): Nome do arquivo da página publicada no Power BI.
+
+2. Título (string): Título da página.
+
+3. Ícone (string): Ícone que representa a página.
+
+4. Subtítulo (string): Subtítulo da página.
+
+5. Aba e Agrupamento em Área de Serviço (string): Nome da aba e agrupamento em que a página está localizada.
+
+6. Página PNP (string): Nome da página no Power BI.
+
+7. Ordem (string): Ordem em que a página deve aparecer na lista de páginas.
+
+8. SubOrdem (string): Ordem em que a página deve aparecer dentro do agrupamento.
+
+Essas colunas são utilizadas para organizar e apresentar as páginas do Power BI de forma clara e intuitiva para os usuários. O título, ícone e subtítulo ajudam a identificar a página, enquanto a aba e agrupamento em área de serviço ajudam a categorizá-la. A ordem e subordem definem a posição da página na lista de páginas e dentro do agrupamento, respectivamente. </p>
+                    
                     
                         <p> Authors: dsbr </p>
                      
@@ -3195,6 +4308,36 @@
                     
                         <p> Fato IGC </p>
                      
+                    
+                        <p> Descrição Automática: A tabela fIGC possui informações sobre as Instituições de Ensino Superior (IES) do Brasil e é utilizada para calcular o Índice Geral de Cursos (IGC), que é um indicador de qualidade do ensino superior no país. As colunas da tabela são:
+
+- Ano: ano de referência dos dados.
+- Código da IES: código identificador da IES.
+- Nome da IES: nome completo da IES.
+- Sigla da IES: sigla da IES.
+- Organização Acadêmica: tipo de organização acadêmica da IES (universidade, centro universitário, faculdade, etc.).
+- Categoria Administrativa: categoria administrativa da IES (pública, privada, federal, estadual, municipal, etc.).
+- Sigla da UF: sigla da unidade federativa onde a IES está localizada.
+- TX_OBS: observações sobre a IES.
+- Nº de Cursos com CPC no triênio: número de cursos da IES que foram avaliados pelo Conceito Preliminar de Curso (CPC) nos últimos três anos.
+- Alfa (Proporção de Graduação): proporção de alunos da IES matriculados em cursos de graduação.
+- Conceito Médio de Graduação: conceito médio dos cursos de graduação da IES avaliados pelo CPC.
+- Beta (Proporção de Mestrado - Equivalente): proporção de alunos da IES matriculados em cursos de mestrado ou programas de pós-graduação stricto sensu.
+- Conceito Médio de Mestrado: conceito médio dos cursos de mestrado da IES avaliados pelo CPC.
+- Gama (Proporção de Doutorandos – Equivalente): proporção de alunos da IES matriculados em cursos de doutorado ou programas de pós-graduação stricto sensu.
+- Conceito Médio do Doutorado: conceito médio dos cursos de doutorado da IES avaliados pelo CPC.
+- IGC (Contínuo): valor do Índice Geral de Cursos (IGC) da IES, em escala contínua.
+- IGC (Faixa): faixa do Índice Geral de Cursos (IGC) da IES, em uma escala de 1 a 5.
+- g_Alfa: nota padronizada da proporção de alunos da IES matriculados em cursos de graduação.
+- g_Beta: nota padronizada da proporção de alunos da IES matriculados em cursos de mestrado ou programas de pós-graduação stricto sensu.
+- g_Gama: nota padronizada da proporção de alunos da IES matriculados em cursos de doutorado ou programas de pós-graduação stricto sensu.
+- g_Conceito Médio de Graduação: nota padronizada do conceito médio dos cursos de graduação da IES avaliados pelo CPC.
+- g_Conceito Médio de Mestrado: nota padronizada do conceito médio dos cursos de mestrado da IES avaliados pelo CPC.
+- g_Conceito Médio do Doutorado: nota padronizada do conceito médio dos cursos de doutorado da IES avaliados pelo CPC.
+- g_IGC (Contínuo): nota padronizada do Índice Geral de Cursos (IGC) da IES, em escala contínua.
+- g_IGC (Faixa): nota padronizada do Índice Geral de Cursos (IGC) da IES, em uma escala de 1 a 5.
+- g_Cursos com CPC no triênio: nota padronizada do número de cursos da IES que foram avaliados pelo Conceito Preliminar de Curso (CPC) nos últimos três anos. </p>
+                    
                     
                         <p> Authors: dsbr </p>
                      
@@ -3331,6 +4474,23 @@
                         <p> Fato Ciclos de matrícula </p>
                      
                     
+                        <p> Descrição Automática: A tabela fCiclos possui as seguintes colunas:
+
+- Ano: data e hora em que o ciclo de matrícula foi realizado.
+- UO: identificador único da unidade organizacional.
+- skUnidade: chave única da unidade organizacional.
+- codUnidade: código da unidade organizacional.
+- codCicloMatricula: código do ciclo de matrícula.
+- tipoCurso: tipo de curso oferecido no ciclo de matrícula.
+- tipoOferta: tipo de oferta do curso no ciclo de matrícula.
+- tipoEixoTecnologico: tipo de eixo tecnológico do curso no ciclo de matrícula.
+- Vagas_Ofertadas: número de vagas oferecidas no ciclo de matrícula.
+- anoInicioCiclo: ano de início do ciclo de matrícula.
+- skCicloMatricula: chave única do ciclo de matrícula.
+
+Essas colunas representam informações relevantes sobre os ciclos de matrícula realizados em uma determinada instituição de ensino, incluindo dados sobre as unidades organizacionais, cursos, vagas oferecidas e outros detalhes importantes para a gestão acadêmica. </p>
+                    
+                    
                         <p> Authors: dsbr </p>
                      
                     
@@ -3405,6 +4565,23 @@
                     
                         <p> Fato Servidores (Dados Siape) </p>
                      
+                    
+                        <p> Descrição Automática: A tabela fServidoresSiape é uma tabela de fatos que contém informações sobre os servidores públicos federais do Brasil. As colunas da tabela são as seguintes:
+
+- AnoMes: data e hora em que os dados foram coletados.
+- codEscolaridade: código que representa o nível de escolaridade do servidor.
+- codTitulacao: código que representa o título acadêmico do servidor.
+- codOrgao: código que representa o órgão em que o servidor trabalha.
+- skCargo: chave que representa o cargo do servidor.
+- skSituacaoFuncional: chave que representa a situação funcional do servidor.
+- codSexoIdade: código que representa o sexo e a idade do servidor.
+- skJornada: chave que representa a jornada de trabalho do servidor.
+- numVinculos: número de vínculos que o servidor possui.
+- skTempoServico: chave que representa o tempo de serviço do servidor.
+- skDimCarreira: chave que representa a dimensão da carreira do servidor.
+
+Essas colunas são usadas para analisar e entender as características dos servidores públicos federais do Brasil, como sua escolaridade, titulação, órgão de trabalho, cargo, situação funcional, jornada de trabalho, número de vínculos e tempo de serviço. </p>
+                    
                     
                         <p> Authors: dsbr </p>
                      
@@ -3481,6 +4658,19 @@
                         <p> Dimensão situação funcional </p>
                      
                     
+                        <p> Descrição Automática: A tabela dimSitFuncional é uma tabela de dimensão que contém informações sobre as situações funcionais dos funcionários de uma empresa. As colunas da tabela são:
+
+- skSituacaoFuncional: é a chave primária da tabela, que identifica unicamente cada registro.
+- Situacao: é o nome da situação funcional, como "Ativo", "Afastado", "Licenciado", etc.
+- SituacaoFuncional: é uma descrição mais detalhada da situação funcional, como "Ativo - em exercício", "Afastado - por doença", "Licenciado - para tratar de interesse particular", etc.
+- Regime: é o regime de trabalho do funcionário, como "CLT", "Estagiário", "Temporário", etc.
+- Tipo de Situação: é o tipo de situação funcional, como "Ativo", "Inativo", "Afastado", "Licenciado", etc.
+- codGrupoSituacao: é o código do grupo de situação funcional, que pode ser usado para agrupar situações funcionais semelhantes.
+- GrupoSituacao: é o nome do grupo de situação funcional, como "Situações Ativas", "Situações Inativas", "Situações de Afastamento", "Situações de Licença", etc.
+
+Essa tabela é útil para análises e relatórios que envolvam as situações funcionais dos funcionários, permitindo agrupar e filtrar os dados de acordo com as diferentes colunas. </p>
+                    
+                    
                         <p> Authors: dsbr </p>
                      
                     
@@ -3539,6 +4729,19 @@
                     
                         <p> Dimensão sexo e idade (valores dinâmicos Siape) </p>
                      
+                    
+                        <p> Descrição Automática: A tabela dimSexoIdadeSiape possui as seguintes colunas:
+
+- codSexoIdade: é um identificador único para cada combinação de faixa etária e sexo.
+- FaixaEtaria: é a faixa etária correspondente à combinação de idade e sexo.
+- Sexo: é o sexo correspondente à combinação de idade e faixa etária.
+- ordemFaixaEtaria: é um número que representa a ordem da faixa etária na tabela.
+- ordemSexo: é um número que representa a ordem do sexo na tabela.
+- FaixaEtariaDeclarada: é a faixa etária declarada pelo servidor público.
+- SexoDeclarada: é o sexo declarado pelo servidor público.
+
+Essa tabela é utilizada para armazenar informações sobre a idade e o sexo dos servidores públicos, permitindo a análise de dados relacionados a essas características. As colunas ordemFaixaEtaria e ordemSexo são utilizadas para ordenar as faixas etárias e os sexos na tabela, facilitando a visualização e análise dos dados. As colunas FaixaEtariaDeclarada e SexoDeclarada permitem a identificação de possíveis discrepâncias entre a idade e o sexo declarados pelo servidor público e a idade e o sexo registrados no sistema. </p>
+                    
                     
                         <p> Authors: dsbr </p>
                      
@@ -3599,6 +4802,15 @@
                         <p> Dimensão Órgão </p>
                      
                     
+                        <p> Descrição Automática: A tabela dimOrgao possui três colunas:
+
+1. codOrgao: é uma coluna do tipo inteiro (int64) que representa o código do órgão. Cada órgão possui um código único que o identifica dentro do sistema.
+
+2. nomeOrgao: é uma coluna do tipo string que armazena o nome do órgão. Essa coluna é importante para identificar o órgão de forma mais amigável para os usuários do sistema.
+
+3. CodUO: é uma coluna do tipo inteiro (int64) que representa o código da unidade organizacional (UO) a qual o órgão pertence. Cada órgão está associado a uma UO, que é uma estrutura organizacional maior que pode conter vários órgãos. Essa coluna é importante para facilitar a gestão e organização dos órgãos dentro da UO correspondente. </p>
+                    
+                    
                         <p> Authors: dsbr </p>
                      
                     
@@ -3641,6 +4853,17 @@
                     
                         <p> Dimensão Jornada de Trabalho </p>
                      
+                    
+                        <p> Descrição Automática: A tabela dimJornada possui três colunas:
+
+1. skJornada: é a chave primária da tabela, que identifica de forma única cada registro da tabela. É do tipo inteiro (int64).
+
+2. codJornada: é o código da jornada de trabalho. É do tipo inteiro (int64).
+
+3. DescricaoJornada: é a descrição da jornada de trabalho. É do tipo string.
+
+Essa tabela é utilizada em um modelo de dados dimensional para armazenar informações sobre as jornadas de trabalho existentes em uma empresa. A coluna skJornada é uma chave gerada automaticamente pelo sistema para identificar cada registro da tabela. A coluna codJornada armazena o código da jornada de trabalho, que pode ser utilizado em outras tabelas para referenciar a jornada de trabalho de um funcionário, por exemplo. A coluna DescricaoJornada armazena uma descrição da jornada de trabalho, que pode ser utilizada para facilitar a compreensão dos dados pelos usuários do sistema. </p>
+                    
                     
                         <p> Authors: dsbr </p>
                      
@@ -3685,6 +4908,17 @@
                         <p> Dimensão escolaridade de servidores </p>
                      
                     
+                        <p> Descrição Automática: A tabela dimEscolaridade possui três colunas:
+
+1. codEscolaridade (int64): Esta coluna armazena o código único de identificação para cada nível de escolaridade. É um número inteiro de 64 bits.
+
+2. Escolaridade (string): Esta coluna armazena o nome do nível de escolaridade, como "Ensino Fundamental", "Ensino Médio", "Graduação", "Pós-Graduação", etc. É uma string de caracteres.
+
+3. NivelEscolaridade (string): Esta coluna armazena o nível de ensino correspondente ao nível de escolaridade, como "Fundamental", "Médio", "Superior", "Pós-Graduação", etc. É uma string de caracteres.
+
+Essa tabela é utilizada para armazenar informações sobre os diferentes níveis de escolaridade que podem ser encontrados em um determinado conjunto de dados. As informações contidas nesta tabela podem ser utilizadas para realizar análises e estudos sobre a relação entre a escolaridade e outras variáveis presentes no conjunto de dados. </p>
+                    
+                    
                         <p> Authors: dsbr </p>
                      
                     
@@ -3727,6 +4961,20 @@
                     
                         <p> Dimensão cargos </p>
                      
+                    
+                        <p> Descrição Automática: A tabela dimCargos possui as seguintes colunas:
+
+- skCargo: é a chave primária da tabela, que identifica de forma única cada registro.
+- RegimeJuridico: indica o regime jurídico ao qual o cargo está submetido, podendo ser estatutário, celetista, entre outros.
+- codCargo: é o código do cargo, que pode ser utilizado para identificação e classificação do cargo.
+- Cargo: é o nome do cargo, que indica a função ou atividade que o servidor público exerce.
+- Classe: indica a classe do cargo, que pode ser utilizada para definir a remuneração e progressão na carreira.
+- Nivel: indica o nível do cargo, que também pode ser utilizado para definir a remuneração e progressão na carreira.
+- Padrao: indica o padrão do cargo, que é utilizado para definir a remuneração do servidor público.
+- skCarreira: é a chave estrangeira que relaciona o cargo com a tabela dimCarreiras, que contém informações sobre as carreiras existentes na organização.
+
+Essas informações são importantes para a gestão de recursos humanos de uma organização, pois permitem a identificação e classificação dos cargos, além de auxiliar na definição da remuneração e progressão na carreira dos servidores públicos. </p>
+                    
                     
                         <p> Authors: dsbr </p>
                      
@@ -3790,6 +5038,23 @@
                     
                         <p> Fato funções </p>
                      
+                    
+                        <p> Descrição Automática: A tabela fFuncoes possui as seguintes colunas:
+
+- AnoMes: data e hora em que a informação foi registrada.
+- codEscolaridade: código que representa o nível de escolaridade do funcionário.
+- codSexoIdade: código que representa o sexo e a idade do funcionário.
+- codTitulacao: código que representa a titulação do funcionário.
+- skCargo: chave que identifica o cargo do funcionário.
+- skFuncao: chave que identifica a função do funcionário.
+- skSituacaoFuncional: chave que identifica a situação funcional do funcionário.
+- codOrgao: código que representa o órgão em que o funcionário trabalha.
+- numVinculos: número de vínculos que o funcionário possui com o órgão.
+- skTempoServico: chave que identifica o tempo de serviço do funcionário.
+- skDimCarreira: chave que identifica a dimensão da carreira do funcionário.
+
+Essas informações são importantes para o gerenciamento de recursos humanos e para a tomada de decisões estratégicas em relação à gestão de pessoal. Por exemplo, a escolaridade e a titulação podem ser usadas para identificar funcionários com potencial para promoção, enquanto a situação funcional pode indicar a necessidade de treinamento ou realocação de pessoal. </p>
+                    
                     
                         <p> Authors: dsbr </p>
                      
@@ -3866,6 +5131,19 @@
                         <p> Dimensão Função </p>
                      
                     
+                        <p> Descrição Automática: A tabela dimFuncao possui as seguintes colunas:
+
+- skFuncao: é a chave primária da tabela, que identifica de forma única cada registro da tabela.
+- NivelFuncao: indica o nível hierárquico da função, podendo ser "Operacional", "Tático" ou "Estratégico".
+- FuncaoCompleto: é o nome completo da função, incluindo o nível hierárquico e o nome da função em si.
+- lkFuncao: é a chave estrangeira que faz referência à tabela de dimensão de localização, indicando o local onde a função é exercida.
+- DescricaoFuncao: é uma descrição breve da função, indicando suas principais responsabilidades e atividades.
+- CargoFuncao: é o nome do cargo associado à função.
+- Nome do Cargo: é o nome completo do cargo associado à função.
+
+Essa tabela é utilizada para armazenar informações sobre as funções existentes em uma organização, incluindo seu nível hierárquico, descrição, cargo associado e localização. Essas informações podem ser utilizadas para análises e tomadas de decisão relacionadas à estrutura organizacional e gestão de pessoas. </p>
+                    
+                    
                         <p> Authors: dsbr </p>
                      
                     
@@ -3924,6 +5202,68 @@
                     
                         <p> Fato CPC </p>
                      
+                    
+                        <p> Descrição Automática: A tabela fCPC possui informações sobre o Conceito Preliminar de Curso (CPC) de instituições de ensino superior no Brasil. As colunas da tabela são:
+
+- Ano: ano de referência dos dados.
+- codIES: código da instituição de ensino superior.
+- nomeIES: nome da instituição de ensino superior.
+- siglaIES: sigla da instituição de ensino superior.
+- orgAcademica: tipo de organização acadêmica da instituição de ensino superior.
+- categoriaAdministrativa: categoria administrativa da instituição de ensino superior.
+- codCurso: código do curso.
+- codArea: código da área do curso.
+- nomeArea: nome da área do curso.
+- modalidadeEnsino: modalidade de ensino do curso.
+- codMunicipio: código do município onde a instituição de ensino superior está localizada.
+- nomeMunicipio: nome do município onde a instituição de ensino superior está localizada.
+- siglaUF: sigla do estado onde a instituição de ensino superior está localizada.
+- concluintesInscritos: número de concluintes inscritos no Enade (Exame Nacional de Desempenho dos Estudantes).
+- concluintesParticipantes: número de concluintes que efetivamente participaram do Enade.
+- NB-FG: nota bruta média dos concluintes na prova de formação geral do Enade.
+- NB-CE: nota bruta média dos concluintes na prova específica do curso do Enade.
+- NP-Enade: nota padronizada do Enade.
+- numConcluintesEnem: número de concluintes que fizeram o Enem (Exame Nacional do Ensino Médio).
+- percentualConcluintesEnem: percentual de concluintes que fizeram o Enem.
+- NB-IDD: nota bruta média do Indicador de Diferença entre os Desempenhos Observado e Esperado (IDD).
+- NP-IDD: nota padronizada do IDD.
+- NB-OrgDidaticoPedagogica: nota bruta média do indicador de organização didático-pedagógica.
+- NP-OrgDidaticoPedagogica: nota padronizada do indicador de organização didático-pedagógica.
+- NB-Infraestrutura: nota bruta média do indicador de infraestrutura.
+- NP-Infraestrutura: nota padronizada do indicador de infraestrutura.
+- NB-OportunidadesAmpliacaoFormacao: nota bruta média do indicador de oportunidades de ampliação da formação.
+- NP-OportunidadesAmpliacaoFormacao: nota padronizada do indicador de oportunidades de ampliação da formação.
+- numDocentes: número de docentes do curso.
+- NB-Mestres: nota bruta média do indicador de mestres do curso.
+- NP-Mestres: nota padronizada do indicador de mestres do curso.
+- NB-Doutores: nota bruta média do indicador de doutores do curso.
+- NP-Doutores: nota padronizada do indicador de doutores do curso.
+- NB-RegimeTrabalho: nota bruta média do indicador de regime de trabalho dos docentes do curso.
+- NP-RegimeTrabalho: nota padronizada do indicador de regime de trabalho dos docentes do curso.
+- CPCContinuo: conceito preliminar de curso contínuo.
+- CPCFaixa: faixa do conceito preliminar de curso.
+- Observacao: observação sobre o curso.
+- Código do Endereço: código do endereço da instituição de ensino superior.
+- skUnidade: chave da unidade.
+- gNP_CPC Contínuo: nota padronizada do CPC contínuo do grupo da instituição de ensino superior.
+- gNP_Enade: nota padronizada do Enade do grupo da instituição de ensino superior.
+- gNP_DocentesDoutores: nota padronizada do indicador de doutores do grupo da instituição de ensino superior.
+- gNP_DocentesMestres: nota padronizada do indicador de mestres do grupo da instituição de ensino superior.
+- gNP_IDD: nota padronizada do IDD do grupo da instituição de ensino superior.
+- gNP_Infraestrutura: nota padronizada do indicador de infraestrutura do grupo da instituição de ensino superior.
+- gNP_OrgDidaticoPedagogica: nota padronizada do indicador de organização didático-pedagógica do grupo da instituição de ensino superior.
+- gNP_OportunidadesAmpliacaoFormacao: nota padronizada do indicador de oportunidades de ampliação da formação do grupo da instituição de ensino superior.
+- gNP_RegimeTrabalho: nota padronizada do indicador de regime de trabalho dos docentes do grupo da instituição de ensino superior.
+- gNB_DocentesDoutores: nota bruta média do indicador de doutores do grupo da instituição de ensino superior.
+- gNB_DocentesMestres: nota bruta média do indicador de mestres do grupo da instituição de ensino superior.
+- gNB_IDD: nota bruta média do IDD do grupo da instituição de ensino superior.
+- gNB_Infraestrutura: nota bruta média do indicador de infraestrutura do grupo da instituição de ensino superior.
+- gNB_OrgDidaticoPedagogica: nota bruta média do indicador de organização didático-pedagógica do grupo da instituição de ensino superior.
+- gNB_OportunidadesAmpliacaoFormacao: nota bruta média do indicador de oportunidades de ampliação da formação do grupo da instituição de ensino superior.
+- gNB_RegimeTrabalho: nota bruta média do indicador de regime de trabalho dos docentes do grupo da instituição de ensino superior.
+- Nome do Curso: nome do curso.
+- codUnidade: código da unidade. </p>
+                    
                     
                         <p> Authors: dsbr </p>
                      
@@ -4188,6 +5528,17 @@
                         <p> Contador de acessos </p>
                      
                     
+                        <p> Descrição Automática: A tabela de nome contador-monitor possui três colunas:
+
+1. 'tab_name' (nome da aba): é uma coluna do tipo string que armazena o nome da aba do contador-monitor.
+
+2. 'full_image' (imagem completa): é uma coluna do tipo string que armazena o caminho da imagem completa do contador-monitor. Essa imagem é exibida quando o contador está funcionando normalmente.
+
+3. 'slow_image' (imagem lenta): é uma coluna do tipo string que armazena o caminho da imagem lenta do contador-monitor. Essa imagem é exibida quando o contador está funcionando de forma lenta ou com problemas.
+
+Essas colunas são utilizadas para armazenar informações sobre a aparência do contador-monitor, permitindo que o sistema exiba a imagem correta de acordo com o seu estado atual. A imagem completa é exibida quando o contador está funcionando normalmente, enquanto a imagem lenta é exibida quando há algum problema ou lentidão no funcionamento do contador. </p>
+                    
+                    
                         <p> Authors: dsbr </p>
                      
                     
@@ -4231,6 +5582,13 @@
                         <p> Tabela de grupo de cálculo para identificação da relação entre o órgão e o orçamento </p>
                      
                     
+                        <p> Descrição Automática: A tabela RelacaoOrgao possui duas colunas:
+
+1. "Relação do Órgão": é uma coluna do tipo string que armazena o nome da relação do órgão. Essa coluna pode conter informações como o nome do órgão, a função que ele desempenha ou a relação que ele tem com outros órgãos.
+
+2. "Ordinal": é uma coluna do tipo int64 que armazena um número inteiro que representa a ordem ou posição da relação do órgão. Essa coluna é útil para ordenar as relações do órgão de acordo com a sua importância ou relevância. Por exemplo, se a relação do órgão for "órgão principal", o valor da coluna "Ordinal" pode ser 1, enquanto que se a relação do órgão for "órgão secundário", o valor da coluna "Ordinal" pode ser 2. </p>
+                    
+                    
                         <p> Authors: dsbr </p>
                      
                     
@@ -4270,6 +5628,9 @@
                         <p> Tabela de medidas de indicadores de acompanhamento orçamento </p>
                      
                     
+                        <p> Descrição Automática: Desculpe, mas a tabela IndicAcompOrc não pode ser explicada apenas com a informação de uma coluna do tipo string. É necessário ter acesso a todas as colunas da tabela para poder explicá-la adequadamente. Por favor, forneça mais informações sobre a tabela ou as outras colunas para que eu possa ajudá-lo melhor. </p>
+                    
+                    
                         <p> Authors: dsbr </p>
                      
                     
@@ -4304,6 +5665,17 @@
                     
                         <p> Dimensão tempo de serviço </p>
                      
+                    
+                        <p> Descrição Automática: A tabela dimTempoServico possui três colunas:
+
+1. skTempoServico (int64): é a chave primária da tabela, utilizada para identificar de forma única cada registro.
+
+2. TempoServico (string): é a coluna que armazena a descrição do tempo de serviço, por exemplo, "Menos de 1 ano", "De 1 a 2 anos", "De 2 a 5 anos", "Mais de 5 anos", entre outros.
+
+3. TempoReferencia (int64): é a coluna que armazena o valor de referência para o tempo de serviço descrito na coluna TempoServico. Por exemplo, se a descrição do tempo de serviço for "De 2 a 5 anos", o valor de referência pode ser 3 (representando a média de 2 e 5 anos).
+
+Essa tabela é utilizada para categorizar o tempo de serviço dos funcionários de uma empresa, permitindo que sejam feitas análises e comparações com base nessa informação. </p>
+                    
                     
                         <p> Authors: dsbr </p>
                      
@@ -4347,6 +5719,19 @@
                     
                         <p> Dimensão carreiras </p>
                      
+                    
+                        <p> Descrição Automática: A tabela dimCarreiras é uma tabela de dimensão que contém informações sobre as carreiras existentes na organização. As colunas da tabela são as seguintes:
+
+- skDimCarreira: é a chave primária da tabela, que identifica unicamente cada registro da tabela.
+- skCarreira: é a chave da carreira, que identifica unicamente cada carreira na organização.
+- CarreiraDescricao: é a descrição da carreira, que fornece informações sobre a carreira.
+- CarreiraSigla: é a sigla da carreira, que é uma abreviação da descrição da carreira.
+- lkCargo: é a chave estrangeira que se relaciona com a tabela de dimensão de cargos, indicando qual cargo está associado a essa carreira.
+- lkRegjur: é a chave estrangeira que se relaciona com a tabela de dimensão de regiões jurídicas, indicando em qual região jurídica essa carreira está localizada.
+- lkSituacao: é a chave estrangeira que se relaciona com a tabela de dimensão de situações, indicando qual é a situação atual da carreira (por exemplo, ativa, inativa, em processo de criação, etc.).
+
+Essas informações são importantes para a organização, pois permitem que sejam feitas análises e tomadas de decisão com base nas carreiras existentes e em suas características. </p>
+                    
                     
                         <p> Authors: dsbr </p>
                      
@@ -4428,7 +5813,7 @@
     <!-- Prisma -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/plugins/autoloader/prism-autoloader.min.js"></script>
-    <script src="static/js/prism-line-numbers.js"></script>
+    <script src="src/static/js/prism-line-numbers.js"></script>
 
     <!-- End Prisma -->
 
