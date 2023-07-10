@@ -114,4 +114,13 @@
         _resizeElement(pre);
     });
 
+    // Bloqueia o fechamento da navbar
+    setTimeout(function(){
+        var clone = $("#navigation")[0].cloneNode(true);
+        $("#navigation").remove();
+        $("#header-navigation").append(clone);
+        $("#navigation").click(function(){
+            $("html").scrollTop(0);
+        });
+    }, 500)
 }());
