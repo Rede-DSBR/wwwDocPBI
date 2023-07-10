@@ -22,3 +22,17 @@ table {
     overflow-x: auto;
     width: 100%;
 }
+
+/* scroll abaixo da navbar */
+h1 {
+    scroll-margin-top: 140px;
+}
+
+h2 {
+    scroll-margin-top: 140px;
+}
+
+.icon-png img {
+    width: 1em;
+    height: 1em;
+}
