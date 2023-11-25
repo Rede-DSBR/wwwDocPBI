@@ -152,7 +152,7 @@
                                         </span>
                                         <span class="content"> &nbsp;&nbsp;Geral</span>
                                     </a>
-                                    <div class="menu-folder">
+                                    <div class="menu-folder drop-menu">
                                         <a class="menu-item" href="javascript: void(0)">
                                             <!-- <span class="icon">
  <i class="fas fa-bell" aria-hidden="true"></i>
@@ -696,7 +696,7 @@
 
                                         </ul>
                                     </div>
-                                    <div class="menu-folder">
+                                    <div class="menu-folder drop-menu">
                                         <a class="menu-item" href="javascript: void(0)">
                                             <!-- <span class="icon">
  <i class="fas fa-bell" aria-hidden="true"></i>
@@ -930,7 +930,7 @@
 
                                         </ul>
                                     </div>
-                                    <div class="menu-folder">
+                                    <div class="menu-folder drop-menu">
                                         <a class="menu-item" href="javascript: void(0)">
                                             <!-- <span class="icon">
  <i class="fas fa-bell" aria-hidden="true"></i>
@@ -14860,6 +14860,14 @@
             if ($(window).width() >= 992) {
                 openSidebar();
             }
+
+            // Collapses menu-folders
+            $(".drop-menu").click(function(){
+                $(this).toggleClass('active');
+            });
+            $(".drop-menu ul").click(function(e){
+                e.stopPropagation();
+            });
         });
 
     </script>
